@@ -24,7 +24,7 @@ function filteredDataset(nastyData) {
         object.geometry.coordinates = element.geometry.coordinates;
         object.properties = element.properties;
          
-        console.log(cleanData)
+        console.log('cleanData', cleanData)
 		return object;
 	});
 }

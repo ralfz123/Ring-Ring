@@ -1,10 +1,10 @@
-@import url(//db.onlinewebfonts.com/c/28a1199b2b647d6a186138b6bd3015d6?family=VAG+Rundschrift);
+/* @import url(//db.onlinewebfonts.com/c/28a1199b2b647d6a186138b6bd3015d6?family=VAG+Rundschrift); */
 
 /* ***************************************************** */
 /*                         OVERALL                       */
 /* ***************************************************** */
 
-* {
+body {
 	background-color: #be3027;
 	color: #ffffff;
 }
@@ -13,7 +13,8 @@
 /*                         BODY                          */
 /* ***************************************************** */
 body {
-	font-family: 'VAG Rundschrift', sans-serif;
+	/* font-family: 'VAG Rundschrift', sans-serif; */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ***************************************************** */
@@ -22,4 +23,64 @@ body {
 
 #logo {
 	width: 500px;
+}
+
+/* ***************************************************** */
+/*                         FILTER BUTTONS                 */
+/* ***************************************************** */
+#filter-pattern {
+	background-color: rgb(194, 194, 194);
+	color: #000000;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	position: absolute;
+	/* width: 30%;
+    max-width: 30%; */
+	padding: 0.5em;
+	margin-left: 0.5em;
+	margin-top: 3rem;
+}
+
+#filter-pattern input {
+	cursor: pointer;
+}
+
+#filter-pattern label {
+	font-size: 1rem;
+}
+
+/* hover state - label */
+#filter-pattern label:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#filter-pattern input:checked + label {
+	color: #ffffff;
+}
+
+/* ***************************************************** */
+/*                         TOOLTIP		                 */
+/* ***************************************************** */
+
+#tooltip {
+	visibility: hidden;
+	background-color: rgb(194, 194, 194);
+	border: 1px solid #000000;
+	border-radius: 5px;
+	color: #000000;
+	position: absolute;
+	width: 15rem;
+	padding: 0.7em;
+	padding-top: 0em;
+	margin-left: 300px;
+}
+
+#tooltip span {
+	color: rgb(58, 58, 58);
+}
+
+#tooltip h4 {
+	margin-top: 2em;
+	margin-bottom: 0em;
 }

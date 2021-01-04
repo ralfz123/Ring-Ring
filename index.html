@@ -5,48 +5,109 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Ring-Ring Datavisualisatie</title>
-		<link rel="shortcut icon" type="image/svg" href="ringring-logo.svg"/>
+		<link rel="shortcut icon" type="image/svg" href="ringring-logo.svg" />
 		<link rel="stylesheet" href="/style/index.css" />
-		<link
+		<link 
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"
 			rel="stylesheet"
 		/>
-		<link 
+		<link
 			href="//db.onlinewebfonts.com/c/28a1199b2b647d6a186138b6bd3015d6?family=VAG+Rundschrift"
 			rel="stylesheet"
 			type="text/css"
 		/>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap" rel="stylesheet"/>
-		
+
 		<script src="https://d3js.org/d3.v6.min.js"></script>
-  		<script src="https://unpkg.com/topojson@3.0.2			/dist/topojson.min.js"></script>
-    	<script src="https://d3js.org/d3-zoom.v2.min.js"></script>
+		<script src="https://unpkg.com/topojson@3.0.2			/dist/topojson.min.js"></script>
+		<script src="https://d3js.org/d3-zoom.v2.min.js"></script>
 		<script src="https://unpkg.com/topojson@3"></script>
 
 		<!-- Mapbox -->
 		<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
 		<link
-		  href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
-		  rel="stylesheet"
+			href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+			rel="stylesheet"
 		/>
-
 	</head>
 	<body>
-        <!-- header -->
-        <header>
-			<h1>Welkom!</h1>
+		<!-- header -->
+		<header>
+			<h1>Fietsongelukken</h1>
 			<!-- <img id="logo" src="/img/ring-ring-logo-2.png" alt="ring-ring-logo" /> -->
-        </header>
-        
-        <!-- main -->
+		</header>
+
+		<!-- main -->
 		<main>
 			<div id="dataviz"></div>
 			<svg></svg>
+			<div id="filter-pattern">
+				<section>
+					<p>Leeftijd</p>
+					<input
+						type="radio"
+						id="all-age"
+						value="all-age"
+						name="age"
+						checked="checked"
+					/>
+					<label for="all-age">Alle</label>
+
+					<input type="radio" id="0-18" value="0-18" name="age" />
+					<label for="0-18">0-18</label>
+
+					<input type="radio" id="18-30" value="18-30" name="age" />
+					<label for="18-30">18-30</label>
+
+					<input type="radio" id="30-65" value="30-65" name="age" />
+					<label for="30-65">30-65</label>
+
+					<input type="radio" id="65+" value="65+" name="age" />
+					<label for="65+">65+</label>
+				</section>
+
+				<section>
+					<p>Ernst ongeval</p>
+
+					<input
+						type="radio"
+						id="all-deadly"
+						value="all-deadly"
+						name="deadly"
+						checked="checked"
+					/>
+					<label for="all-deadly">Alle</label>
+
+					<input
+						type="radio"
+						id="injured"
+						value="injured"
+						name="deadly"
+					/>
+					<label for="injured">Lichtelijk gewond</label>
+
+					<input type="radio" id="dead" value="dead" name="deadly" />
+					<label for="dead">Dodelijk</label>
+				</section>
+			</div>
+
+			<div class="map-plot" style="position: absolute; background-color:yellow; border-radius: 50%; height:25px; width:25px"></div>
+
+			<div id="tooltip">
+				<h2>Fietsongeluk</h2>
+					<p>Ongeval: <span id="tooltip-accident">Licht gewond</span></p>
+					<p>Straat: <span id="tooltip-streetname">Olympiaplein</span></p>
+					<p>Leeftijd: <span id="tooltip-age">18</span></p>
+
+				<h4>Weersomstandigheden</h4>
+					<p>Neerslag: <span id="tooltip-rainfall">0,2 mm</span></p>
+					<p>Wind: <span id="tooltip-wind">39 km/h</span></p>
+			</div>
 		</main>
-        
-        <!-- footer -->
-        <footer></footer>
+
+		<!-- footer -->
+		<footer></footer>
 
 		<script src="/script/index.js"></script>
+		<script src="/script/tooltip.js"></script>
 	</body>
 </html>
