@@ -39,119 +39,109 @@
 
 			<!-- main -->
 			<!-- <main> -->
-				<aside>
-					<div id="filter-pattern">
-						<section>
-							<p>Leeftijd</p>
-							<input
-								type="radio"
-								id="all-age"
-								value="all-age"
-								name="age"
-								checked="checked"
-							/>
-							<label for="all-age">Alle</label>
+			<aside>
+				<div id="filter-pattern">
+					<section>
+						<p>Leeftijd</p>
+						<input
+							type="radio"
+							id="all-age"
+							value="all-age"
+							name="age"
+							checked="checked"
+						/>
+						<label for="all-age">Alle</label>
 
-							<input
-								type="radio"
-								id="0-18"
-								value="0-18"
-								name="age"
-							/>
-							<label for="0-18">0-18</label>
+						<input type="radio" id="0-18" value="0-18" name="age" />
+						<label for="0-18">0-18</label>
 
-							<input
-								type="radio"
-								id="18-30"
-								value="18-30"
-								name="age"
-							/>
-							<label for="18-30">18-30</label>
+						<input
+							type="radio"
+							id="18-30"
+							value="18-30"
+							name="age"
+						/>
+						<label for="18-30">18-30</label>
 
-							<input
-								type="radio"
-								id="30-65"
-								value="30-65"
-								name="age"
-							/>
-							<label for="30-65">30-65</label>
+						<input
+							type="radio"
+							id="30-65"
+							value="30-65"
+							name="age"
+						/>
+						<label for="30-65">30-65</label>
 
-							<input
-								type="radio"
-								id="65+"
-								value="65+"
-								name="age"
-							/>
-							<label for="65+">65+</label>
-						</section>
+						<input type="radio" id="65+" value="65+" name="age" />
+						<label for="65+">65+</label>
+					</section>
 
-						<section>
-							<p>Ernst ongeval</p>
+					<section>
+						<p>Ernst ongeval</p>
 
-							<input
-								type="radio"
-								id="all-deadly"
-								value="all-deadly"
-								name="deadly"
-								checked="checked"
-							/>
-							<label for="all-deadly">Alle</label>
+						<input
+							type="radio"
+							id="all-deadly"
+							value="all-deadly"
+							name="deadly"
+							checked="checked"
+						/>
+						<label for="all-deadly">Alle</label>
 
-							<input
-								type="radio"
-								id="injured"
-								value="injured"
-								name="deadly"
-							/>
-							<label for="injured">Lichtelijk gewond</label>
+						<input
+							type="radio"
+							id="injured"
+							value="injured"
+							name="deadly"
+						/>
+						<label for="injured">Lichtelijk gewond</label>
 
-							<input
-								type="radio"
-								id="dead"
-								value="dead"
-								name="deadly"
-							/>
-							<label for="dead">Dodelijk</label>
-						</section>
-					</div>
-				</aside>
+						<input
+							type="radio"
+							id="dead"
+							value="dead"
+							name="deadly"
+						/>
+						<label for="dead">Dodelijk</label>
+					</section>
+				</div>
+			</aside>
 
-				<article>
-					<div id="dataviz"></div>
-					<svg></svg>
+			<article>
+				<div id="dataviz"></div>
+				<svg></svg>
 
-					<div
-						class="map-plot"
-						style="
-							/* position: absolute; */
-							background-color: yellow;
-							border-radius: 50%;
-							height: 25px;
-							width: 25px;
-						"
-					></div>
-				</article>
+				<div
+					class="map-plot"
+					style="
+						/* position: absolute; */
+						background-color: yellow;
+						border-radius: 50%;
+						height: 25px;
+						width: 25px;
+					"
+				></div>
 
-				<nav>
-					<div id="tooltip">
-						<h2>Fietsongeluk</h2>
-						<p>
-							Ongeval:
-							<span id="tooltip-accident">Licht gewond</span>
-						</p>
-						<p>
-							Straat:
-							<span id="tooltip-streetname">Olympiaplein</span>
-						</p>
-						<p>Leeftijd: <span id="tooltip-age">18</span></p>
+				<div id="map" style="width: 100%; height: 100%; border-radius: 5px;"></div>
+			</article>
 
-						<h4>Weersomstandigheden</h4>
-						<p>
-							Neerslag: <span id="tooltip-rainfall">0,2 mm</span>
-						</p>
-						<p>Wind: <span id="tooltip-wind">39 km/h</span></p>
-					</div>
-				</nav>
+			<nav>
+				<div id="tooltip">
+					<h2>Fietsongeluk</h2>
+					<p>
+						Ongeval:
+						<span id="tooltip-accident">Licht gewond</span>
+					</p>
+					<p>
+						Straat:
+						<span id="tooltip-streetname">Olympiaplein</span>
+					</p>
+					<p>Leeftijd: <span id="tooltip-age">18</span></p>
+
+					<h4>Weersomstandigheden</h4>
+					<p>Neerslag: <span id="tooltip-rainfall">0,2 mm</span></p>
+					<p>Wind: <span id="tooltip-wind">39 km/h</span></p>
+				</div>
+			</nav>
 			<!-- </main> -->
 
 			<!-- footer -->
@@ -159,7 +149,8 @@
 		</div>
 
 		<!-- Script routes -->
-		<script src="script/index.js"></script>
+		<!-- <script src="script/index.js"></script> -->
 		<script src="script/tooltip.js"></script>
+		<script src="script/map.js"></script>
 	</body>
 </html>
