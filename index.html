@@ -42,71 +42,114 @@
 			<aside>
 				<div id="filter-pattern">
 					<section>
-						<p>Leeftijd</p>
-						<input
-							type="radio"
-							id="all-age"
-							value="all-age"
-							name="age"
-							checked="checked"
-						/>
-						<label for="all-age">Alle</label>
+						<h2>Leeftijd</h2>
+						<ul>
+							<li>
+								<input
+									type="radio"
+									id="all-age"
+									value="all-age"
+									name="age"
+									checked="checked"
+								/>
+								<label for="all-age">Alle</label>
+							</li>
 
-						<input type="radio" id="0-18" value="0-18" name="age" />
-						<label for="0-18">0-18</label>
+							<li>
+								<input
+									type="radio"
+									id="0-18"
+									value="0-18"
+									name="age"
+								/>
+								<label for="0-18">0-18</label>
+							</li>
 
-						<input
-							type="radio"
-							id="18-30"
-							value="18-30"
-							name="age"
-						/>
-						<label for="18-30">18-30</label>
+							<li>
+								<input
+									type="radio"
+									id="18-30"
+									value="18-30"
+									name="age"
+								/>
+								<label for="18-30">18-30</label>
+							</li>
 
-						<input
-							type="radio"
-							id="30-65"
-							value="30-65"
-							name="age"
-						/>
-						<label for="30-65">30-65</label>
+							<li>
+								<input
+									type="radio"
+									id="18-30"
+									value="18-30"
+									name="age"
+								/>
+								<label for="18-30">18-30</label>
+							</li>
 
-						<input type="radio" id="65+" value="65+" name="age" />
-						<label for="65+">65+</label>
+							<li>
+								<input
+									type="radio"
+									id="30-65"
+									value="30-65"
+									name="age"
+								/>
+								<label for="30-65">30-65</label>
+							</li>
+							<li>
+								<input
+									type="radio"
+									id="65+"
+									value="65+"
+									name="age"
+								/>
+								<label for="65+">65+</label>
+							</li>
+						</ul>
 					</section>
 
 					<section>
-						<p>Ernst ongeval</p>
+						<h2>Ernst ongeval</h2>
+						<ul>
+							<li>
+								<input
+									type="radio"
+									id="all-deadly"
+									value="all-deadly"
+									name="deadly"
+									checked="checked"
+								/>
+								<label for="all-deadly">Alle</label>
+							</li>
 
-						<input
-							type="radio"
-							id="all-deadly"
-							value="all-deadly"
-							name="deadly"
-							checked="checked"
-						/>
-						<label for="all-deadly">Alle</label>
+							<li>
+								<input
+									type="radio"
+									id="injured"
+									value="injured"
+									name="deadly"
+								/>
+								<label for="injured">Lichtelijk gewond</label>
+							</li>
 
-						<input
-							type="radio"
-							id="injured"
-							value="injured"
-							name="deadly"
-						/>
-						<label for="injured">Lichtelijk gewond</label>
-
-						<input
-							type="radio"
-							id="dead"
-							value="dead"
-							name="deadly"
-						/>
-						<label for="dead">Dodelijk</label>
+							<li>
+								<input
+									type="radio"
+									id="dead"
+									value="dead"
+									name="deadly"
+								/>
+								<label for="dead">Dodelijk</label>
+							</li>
+						</ul>
 					</section>
 				</div>
 			</aside>
 
 			<article>
+				<div
+					id="map"
+					style="width: 100%; height: 100%; border-radius: 5px"
+				></div>
+
 				<div id="dataviz"></div>
 				<svg></svg>
 
@@ -114,14 +157,12 @@
 					class="map-plot"
 					style="
 						/* position: absolute; */
-						background-color: yellow;
+						background-color: rgb(255, 55, 0);
 						border-radius: 50%;
-						height: 25px;
-						width: 25px;
+						height: 15px;
+						width: 15px;
 					"
 				></div>
-
-				<div id="map" style="width: 100%; height: 100%; border-radius: 5px;"></div>
 			</article>
 
 			<nav>
@@ -137,7 +178,7 @@
 					</p>
 					<p>Leeftijd: <span id="tooltip-age">18</span></p>
 
-					<h4>Weersomstandigheden</h4>
+					<h3>Weersomstandigheden</h3>
 					<p>Neerslag: <span id="tooltip-rainfall">0,2 mm</span></p>
 					<p>Wind: <span id="tooltip-wind">39 km/h</span></p>
 				</div>
