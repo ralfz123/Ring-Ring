@@ -25,8 +25,8 @@ body {
 	padding: 0;
 	display: grid;
 	grid-template-areas:
-		'topbar topbar	topbar'
-		'leftside	content	sidebar'
+		'topbar	topbar	topbar'
+		'leftside	content	rightside'
 		'footer	footer	footer';
 
 	grid-template-columns: 1fr 3fr 1fr;
@@ -42,30 +42,51 @@ body {
 	grid-area: topbar;
 
 	display: grid;
-	grid-template-areas: 'logo title empty';
+	grid-template-areas: 'logo nav info';
 	grid-template-columns: 1fr 3fr 1fr;
 	/* grid-auto-rows: minmax(50px, auto); */
-	grid-template-rows: 50px;
-
+	/* grid-template-rows: 50px 50px 50px; */
 
 	/* development styling */
 	/* background-color: #62ff002e; */
-	box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+	/* box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); */
 	border: 1px solid rgb(43, 43, 43);
 	border-radius: 2px;
 }
 
-.container header h1 {
-	grid-area: title;
-	margin-top: 0;
-	text-align: center;
-}
-
-.container header #logo {
+header #logo {
 	grid-area: logo;
 	width: 50px;
 }
 
+header nav ul {
+	grid-area: nav;
+
+	list-style-type: none;
+	padding-left: 0;
+}
+
+header nav ul li {
+	display: inline;
+}
+
+header nav ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+header nav ul li a:hover {
+	color: blue
+}
+
+header nav ul li a:active {
+	text-decoration: underline;
+}
+
+header #info-button {
+	grid-area: info;
+	width: 50px;
+}
 /* ***************************************************** */
 /*                         ASIDE		                 */
 /* ***************************************************** */
@@ -92,10 +113,10 @@ body {
 #filter-pattern {
 	grid-area: filter;
 
-	background-color: rgb(194, 194, 194);
+	background-color: rgba(194, 194, 194, 0.139);
 	color: #000000;
 	border: 1px solid #000000;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	position: absolute;
 	/* width: 30%;
     max-width: 30%; */
@@ -160,6 +181,8 @@ body {
 
 #chart-wrapper {
 	grid-area: chart;
+	background-color: rgba(194, 194, 194, 0.139);
+	border: 1px solid #000000;
 }
 
 #chart-wrapper canvas {
@@ -206,13 +229,13 @@ body {
 }
 
 /* ***************************************************** */
-/*                         SIDEBAR			             */
+/*                         rightside			             */
 /* ***************************************************** */
-.container nav {
-	grid-area: sidebar;
+.container #article-right {
+	grid-area: rightside;
 
 	/* development styling */
-	background-color: #9d00ff2e;
+	background-color: #9d00ff12;
 	border: 1px solid rgb(43, 43, 43);
 }
 
@@ -222,9 +245,9 @@ body {
 
 #tooltip {
 	visibility: hidden;
-	background-color: rgb(194, 194, 194);
+	background-color: rgba(194, 194, 194, 0.139);
 	border: 1px solid #000000;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	color: #000000;
 	position: absolute;
 	width: 15rem;
@@ -249,7 +272,7 @@ body {
 	grid-area: footer;
 
 	/* development styling */
-	background-color: #ff00842e;
+	background-color: #ff008409;
 	border: 1px solid rgb(43, 43, 43);
 	text-align: center;
 	padding-top: 10px;

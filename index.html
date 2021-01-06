@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Ring-Ring | Dashboard</title>
-		<link rel="shortcut icon" type="image/svg" href="ringring-logo.svg" />
+		<link rel="shortcut icon" type="image/svg" href="assets/ringring-logo.svg" />
 		<link rel="stylesheet" href="style/index.css" />
 
 		<!-- fonts -->
@@ -55,8 +55,16 @@
 		<div class="container">
 			<!-- header -->
 			<header>
-				<h1>Fietsongelukken</h1>
-				<img id="logo" src="/ringring-logo.svg" alt="Ring-Ring-logo" />	
+				<img id="logo" src="assets/ringring-logo.svg" alt="Ring-Ring-logo" />
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Dashboard</a></li>
+						<li><a href="/feedback">Feedback</a></li>
+					</ul>
+				</nav>
+
+				<img id="info-button" src="assets/info-button.svg" alt="">
 			</header>
 
 			<!-- main -->
@@ -198,7 +206,7 @@
 				</div> -->
 			</article>
 
-			<nav>
+			<article id="article-right">
 				<div id="tooltip">
 					<h2>Fietsongeluk</h2>
 					<p>
@@ -215,7 +223,7 @@
 					<p>Neerslag: <span id="tooltip-rainfall">0,2 mm</span></p>
 					<p>Wind: <span id="tooltip-wind">39 km/h</span></p>
 				</div>
-			</nav>
+			</article>
 			<!-- </main> -->
 
 			<!-- footer -->
