@@ -11,16 +11,16 @@
 /*                         BODY                          */
 /* ***************************************************** */
 body {
-	/* background-color: #be3027; */
 	color: #000000;
 	/* font-family: 'VAG Rundschrift', sans-serif; */
 	/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 	font-family: 'Luckiest Guy', cursive;
 }
 
-body p, label {
+body p,
+label,
+button {
 	font-family: 'Montserrat', sans-serif;
-
 }
 
 /* ******************************************************************************************************* */
@@ -90,7 +90,9 @@ header nav ul li a:active {
 
 header #info-button {
 	grid-area: info;
-	width: 50px;
+	width: 20px;
+	margin: auto;
+	cursor: pointer;
 }
 /* ***************************************************** */
 /*                         ASIDE		                 */
@@ -225,7 +227,7 @@ header #info-button {
 	height: 100%;
 }
 
-#slider-wrapper{
+#slider-wrapper {
 	/* display:block; */
 }
 
