@@ -12,7 +12,7 @@
 /* ***************************************************** */
 body {
 	/* background-color: #be3027; */
-	color: #ffffff;
+	color: #000000;
 	/* font-family: 'VAG Rundschrift', sans-serif; */
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -20,7 +20,7 @@ body {
 /* ******************************************************************************************************* */
 
 .container {
-	background-color: grey;
+	/* background-color: rgba(128, 128, 128, 0.297); */
 	/* margin: 1rem; */
 	padding: 0;
 	display: grid;
@@ -30,7 +30,8 @@ body {
 		'footer	footer	footer';
 
 	grid-template-columns: 1fr 3fr 1fr;
-	grid-template-rows: 50px 80vh 50px;
+	/* grid-template-rows: 50px 650px 50px; */
+	grid-auto-rows: minmax(50px, auto);
 	grid-gap: 3px;
 }
 
@@ -69,7 +70,7 @@ body {
 	grid-gap: 20px;
 
 	/* development styling */
-	background-color: #00ffff2e;
+	background-color: #00ffff0f;
 	border: 1px solid rgb(43, 43, 43);
 }
 
@@ -151,6 +152,10 @@ body {
 
 #chart-wrapper canvas {
 	/* width: 100%; */
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0;
+	padding-top: 0;
 }
 /* ***************************************************** */
 /*                         DATAVIZ		                 */
@@ -239,7 +244,7 @@ body {
 }
 
 .container footer a {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
 }
 
