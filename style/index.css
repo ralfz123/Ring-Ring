@@ -14,7 +14,13 @@ body {
 	/* background-color: #be3027; */
 	color: #000000;
 	/* font-family: 'VAG Rundschrift', sans-serif; */
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+	font-family: 'Luckiest Guy', cursive;
+}
+
+body p, label {
+	font-family: 'Montserrat', sans-serif;
+
 }
 
 /* ******************************************************************************************************* */
@@ -49,7 +55,6 @@ body {
 
 	/* development styling */
 	/* background-color: #62ff002e; */
-	/* box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); */
 	border: 1px solid rgb(43, 43, 43);
 	border-radius: 2px;
 }
@@ -103,7 +108,7 @@ header #info-button {
 	grid-gap: 20px;
 
 	/* development styling */
-	background-color: #00ffff0f;
+	/* background-color: #00ffff0f; */
 	border: 1px solid rgb(43, 43, 43);
 }
 
@@ -199,21 +204,15 @@ header #info-button {
 	grid-area: content;
 
 	/* development styling */
-	background-color: #ffae002e;
+	/* background-color: #ffae002e; */
 	border: 1px solid rgb(43, 43, 43);
 	position: relative;
 
 	display: grid;
-	grid-template-areas:
-		'map tooltip';
+	grid-template-areas: 'map tooltip';
 
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
-}
-
-#map, #tooltip {
-	grid-column: 1;
-	grid-row:1;
 }
 
 #map {
@@ -226,8 +225,12 @@ header #info-button {
 	height: 100%;
 }
 
-/* #slider {
-	position: absolute;
+#slider-wrapper{
+	/* display:block; */
+}
+
+#slider {
+	position: fixed;
 	z-index: 4;
 
 	-webkit-appearance: none;
@@ -238,39 +241,25 @@ header #info-button {
 	opacity: 0.7;
 	-webkit-transition: 0.2s;
 	transition: opacity 0.2s;
-} */
+}
 
 /* ***************************************************** */
-/*                         #article-right	             */
-/* ***************************************************** */
-/* .container #article-right {
-	grid-area: tooltip; */
-
-	/* development styling */
-	/* background-color: #9d00ff12;
-	border: 1px solid rgb(43, 43, 43);
-} */
-
-/* ***************************************************** */
-/*                       DATAVIZ - TOOLTIP (overlay )    */
+/*            DATAVIZ - TOOLTIP (overlay )    			 */
 /* ***************************************************** */
 
 .container #tooltip {
 	grid-area: tooltip;
 
-	/* development styling */
-
-	border: 1px solid rgb(43, 43, 43);
-
-	visibility: hidden;
+	display: none;
 	background-color: #eaeaea;
-	border: 1px solid #000000;
+	border: 1px inset #000000;
 	color: #000000;
 	position: absolute;
 	z-index: 1;
 	padding: 0.7em;
 	padding-top: 0em;
 	justify-self: right;
+	margin: 1rem;
 }
 
 #tooltip span {
@@ -290,7 +279,7 @@ header #info-button {
 	grid-area: footer;
 
 	/* development styling */
-	background-color: #ff008409;
+
 	border: 1px solid rgb(43, 43, 43);
 	text-align: center;
 	padding-top: 10px;
