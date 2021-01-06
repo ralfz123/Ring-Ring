@@ -26,12 +26,12 @@ body {
 	display: grid;
 	grid-template-areas:
 		'topbar topbar	topbar'
-		'filter	content	sidebar'
+		'leftside	content	sidebar'
 		'footer	footer	footer';
 
 	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: 50px 80vh 50px;
-	grid-gap: 20px;
+	grid-gap: 3px;
 }
 
 /* ***************************************************** */
@@ -57,7 +57,16 @@ body {
 /*                         ASIDE		                 */
 /* ***************************************************** */
 .container aside {
-	grid-area: filter;
+	grid-area: leftside;
+
+	display: grid;
+	grid-template-areas:
+		'filter'
+		'chart';
+
+	grid-template-columns: 1fr;
+	grid-template-rows: 350px;
+	grid-gap: 20px;
 
 	/* development styling */
 	background-color: #00ffff2e;
@@ -65,9 +74,11 @@ body {
 }
 
 /* ***************************************************** */
-/*                        ASIDE - FILTER BUTTONS                 */
+/*                        ASIDE - FILTER BUTTONS          */
 /* ***************************************************** */
 #filter-pattern {
+	grid-area: filter;
+
 	background-color: rgb(194, 194, 194);
 	color: #000000;
 	border: 1px solid #000000;
@@ -108,6 +119,39 @@ body {
 	color: #000000;
 }
 
+#filter-pattern button {
+	background-color: #1159c6;
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+	padding: 11px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+#filter-pattern button:hover {
+	background-color: #112fc6;
+	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+#filter-pattern button:focus {
+	outline: 0;
+}
+
+/* ***************************************************** */
+/*                        ASIDE - CHART			         */
+/* ***************************************************** */
+
+#chart-wrapper {
+	grid-area: chart;
+}
+
+#chart-wrapper canvas {
+	/* width: 100%; */
+}
 /* ***************************************************** */
 /*                         DATAVIZ		                 */
 /* ***************************************************** */
@@ -128,6 +172,20 @@ body {
 	z-index: 2;
 	width: 100%;
 	height: 100%;
+}
+
+#slider {
+	position: absolute;
+	z-index: 4;
+
+	-webkit-appearance: none;
+	width: 100%;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
 }
 
 /* ***************************************************** */
