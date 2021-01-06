@@ -26,7 +26,7 @@ body {
 	display: grid;
 	grid-template-areas:
 		'topbar	topbar	topbar'
-		'leftside	content	rightside'
+		'leftside	content	content'
 		'footer	footer	footer';
 
 	grid-template-columns: 1fr 3fr 1fr;
@@ -202,6 +202,18 @@ header #info-button {
 	background-color: #ffae002e;
 	border: 1px solid rgb(43, 43, 43);
 	position: relative;
+
+	display: grid;
+	grid-template-areas:
+		'map tooltip';
+
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+#map, #tooltip {
+	grid-column: 1;
+	grid-row:1;
 }
 
 #map {
@@ -209,12 +221,12 @@ header #info-button {
 	/* bottom: 0; */
 	/* width: 100%; */
 	position: absolute;
-	z-index: 2;
+	z-index: 1;
 	width: 100%;
 	height: 100%;
 }
 
-#slider {
+/* #slider {
 	position: absolute;
 	z-index: 4;
 
@@ -226,33 +238,39 @@ header #info-button {
 	opacity: 0.7;
 	-webkit-transition: 0.2s;
 	transition: opacity 0.2s;
-}
+} */
 
 /* ***************************************************** */
-/*                         rightside			             */
+/*                         #article-right	             */
 /* ***************************************************** */
-.container #article-right {
-	grid-area: rightside;
+/* .container #article-right {
+	grid-area: tooltip; */
 
 	/* development styling */
-	background-color: #9d00ff12;
+	/* background-color: #9d00ff12;
 	border: 1px solid rgb(43, 43, 43);
-}
+} */
 
 /* ***************************************************** */
-/*                       SIDEBAR - TOOLTIP		         */
+/*                       DATAVIZ - TOOLTIP (overlay )    */
 /* ***************************************************** */
 
-#tooltip {
+.container #tooltip {
+	grid-area: tooltip;
+
+	/* development styling */
+
+	border: 1px solid rgb(43, 43, 43);
+
 	visibility: hidden;
-	background-color: rgba(194, 194, 194, 0.139);
+	background-color: #eaeaea;
 	border: 1px solid #000000;
-	/* border-radius: 5px; */
 	color: #000000;
 	position: absolute;
-	width: 15rem;
+	z-index: 1;
 	padding: 0.7em;
 	padding-top: 0em;
+	justify-self: right;
 }
 
 #tooltip span {
