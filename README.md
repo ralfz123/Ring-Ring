@@ -57,7 +57,7 @@ localhost:000
 
 - [Mapbox](https://docs.mapbox.com/)
 - [Chart.js](https://www.chartjs.org/docs/latest/)
-- [Chart.js Datalable plugin](https://chartjs-plugin-datalabels.netlify.app/guide/getting-started.html#installation)
+- [Chart.js Datalabels plugin](https://chartjs-plugin-datalabels.netlify.app/guide/getting-started.html#installation)
 
 
 ## :cop: License

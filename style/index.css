@@ -76,7 +76,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-	color: blue
+	color: blue;
 }
 
 header nav ul li a:active {
@@ -285,4 +285,129 @@ header #info-button {
 
 .container footer a:hover {
 	text-decoration: underline;
+}
+
+/* ***************************************************** */
+/*                         FEEDBACK PAGE	             */
+/* ***************************************************** */
+
+#feedback-container {
+	/* background-color: rgb(156, 181, 181); */
+	margin: 5rem;
+
+	display: grid;
+	grid-template-areas:
+		'filter	filter	filter'
+		'items	items	items';
+
+	grid-template-columns: 2fr 1fr 1fr;
+	/* grid-template-rows: 50px 650px 50px; */
+	grid-auto-rows: minmax(10px, auto);
+	/* grid-gap: 3px; */
+}
+
+#feedback-filter {
+	grid-area: filter;
+	background-color: rgb(203, 203, 203);
+
+	display: grid;
+	grid-template-areas: 'filter-info color	category';
+	grid-template-columns: 2fr 1fr 1fr;
+}
+
+#feedback-filter-color {
+	grid-area: color;
+	/* background-color: orange; */
+	border: 1px solid black;
+}
+
+#feedback-filter-color button {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: none;
+}
+
+#feedback-filter-color #button-red {
+	background-color: red;
+}
+
+#feedback-filter-color #button-orange {
+	background-color: orange;
+}
+
+#feedback-filter-color #button-green {
+	background-color: green;
+}
+
+#feedback-filter-category {
+	grid-area: category;
+	/* background-color: peru; */
+	border: 1px solid black;
+}
+
+#feedback-list {
+	grid-area: items;
+	border: 1px solid black;
+}
+
+#feedback-list ul {
+	grid-area: items;
+
+	/* margin: 50px; */
+	padding-left: 0;
+	list-style-type: none;
+
+	/* display: grid;
+	grid-template-areas:
+		'content filteroption';
+		
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 3px; */
+}
+
+#feedback-list-item {
+	background-color: rgba(143, 143, 143, 0.311);
+	border: 1px solid black;
+	margin-bottom: 10px;
+	padding: 5px;
+
+	display: grid;
+	grid-template-areas:
+		'id	id id id'
+		'desc desc feedback-color feedback-category';
+
+	grid-template-columns: 2fr 2fr 2fr 2fr;
+	grid-auto-rows: minmax(50px, auto);
+	/* grid-gap: 3px; */
+}
+
+#feedback-id {
+	grid-area: id;
+}
+
+#feedback-desc {
+	grid-area: desc;
+	margin: 0;
+}
+
+#feedback-color {
+	grid-area: feedback-color;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: red;
+}
+
+#feedback-category {
+	grid-area: feedback-category;
+	background-color: grey;
+	width: 100%;
+	color: darkgrey;
+	padding: 0;
+
+	border-radius: 20px;
+	text-align: center;
+	margin: 0;
 }
