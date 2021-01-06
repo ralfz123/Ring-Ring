@@ -1,0 +1,23 @@
+{
+  "name": "ring-ring",
+  "version": "1.0.0",
+  "description": "_Feedback feature upgrade for https://ring-ring.nu/_",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^7.17.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralfz123/ring-ring.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ralfz123/ring-ring/issues"
+  },
+  "homepage": "https://github.com/ralfz123/ring-ring#readme"
+}

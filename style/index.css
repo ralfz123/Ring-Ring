@@ -12,7 +12,7 @@
 /* ***************************************************** */
 body {
 	/* background-color: #be3027; */
-	color: #ffffff;
+	color: #000000;
 	/* font-family: 'VAG Rundschrift', sans-serif; */
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -20,16 +20,19 @@ body {
 /* ******************************************************************************************************* */
 
 .container {
-	background-color: grey;
-
+	/* background-color: rgba(128, 128, 128, 0.297); */
+	/* margin: 1rem; */
+	padding: 0;
 	display: grid;
 	grid-template-areas:
-		'topbar topbar	topbar'
-		'ads	content	sidebar'
+		'topbar	topbar	topbar'
+		'leftside	content	rightside'
 		'footer	footer	footer';
 
 	grid-template-columns: 1fr 3fr 1fr;
-	grid-template-rows: 50px auto 70px;
+	/* grid-template-rows: 50px 650px 50px; */
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 3px;
 }
 
 /* ***************************************************** */
@@ -38,53 +41,88 @@ body {
 .container header {
 	grid-area: topbar;
 
+	display: grid;
+	grid-template-areas: 'logo nav info';
+	grid-template-columns: 1fr 3fr 1fr;
+	/* grid-auto-rows: minmax(50px, auto); */
+	/* grid-template-rows: 50px 50px 50px; */
+
 	/* development styling */
-	background-color: #62ff002e;
+	/* background-color: #62ff002e; */
+	/* box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); */
 	border: 1px solid rgb(43, 43, 43);
+	border-radius: 2px;
 }
 
-.container header h1 {
-	margin-top: 0;
+header #logo {
+	grid-area: logo;
+	width: 50px;
 }
 
-#logo {
-	width: 500px;
+header nav ul {
+	grid-area: nav;
+
+	list-style-type: none;
+	padding-left: 0;
 }
 
+header nav ul li {
+	display: inline;
+}
+
+header nav ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+header nav ul li a:hover {
+	color: blue
+}
+
+header nav ul li a:active {
+	text-decoration: underline;
+}
+
+header #info-button {
+	grid-area: info;
+	width: 50px;
+}
 /* ***************************************************** */
 /*                         ASIDE		                 */
 /* ***************************************************** */
 .container aside {
-	grid-area: ads;
+	grid-area: leftside;
+
+	display: grid;
+	grid-template-areas:
+		'filter'
+		'chart';
+
+	grid-template-columns: 1fr;
+	grid-template-rows: 350px;
+	grid-gap: 20px;
 
 	/* development styling */
-	background-color: #00ffff2e;
+	background-color: #00ffff0f;
 	border: 1px solid rgb(43, 43, 43);
 }
 
 /* ***************************************************** */
-/*                        ASIDE - FILTER BUTTONS                 */
+/*                        ASIDE - FILTER BUTTONS          */
 /* ***************************************************** */
 #filter-pattern {
-	background-color: rgb(194, 194, 194);
+	grid-area: filter;
+
+	background-color: rgba(194, 194, 194, 0.139);
 	color: #000000;
 	border: 1px solid #000000;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	position: absolute;
 	/* width: 30%;
     max-width: 30%; */
 	padding: 0.5em;
 	/* margin-left: 0.5em;
 	margin-top: 3rem; */
-
-	/* display: grid;
-	grid-template-areas:
-		'topbar topbar	topbar'
-		'ads	content	sidebar'
-		'footer	footer	footer';
-
-	grid-template-columns: 1fr 3fr 1fr;
-	grid-template-rows: 50px auto 70px; */
 }
 
 #filter-pattern h2 {
@@ -115,6 +153,45 @@ body {
 	color: #000000;
 }
 
+#filter-pattern button {
+	background-color: #1159c6;
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+	padding: 11px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+#filter-pattern button:hover {
+	background-color: #112fc6;
+	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+#filter-pattern button:focus {
+	outline: 0;
+}
+
+/* ***************************************************** */
+/*                        ASIDE - CHART			         */
+/* ***************************************************** */
+
+#chart-wrapper {
+	grid-area: chart;
+	background-color: rgba(194, 194, 194, 0.139);
+	border: 1px solid #000000;
+}
+
+#chart-wrapper canvas {
+	/* width: 100%; */
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0;
+	padding-top: 0;
+}
 /* ***************************************************** */
 /*                         DATAVIZ		                 */
 /* ***************************************************** */
@@ -124,26 +201,41 @@ body {
 	/* development styling */
 	background-color: #ffae002e;
 	border: 1px solid rgb(43, 43, 43);
+	position: relative;
 }
 
 #map {
-	/* position: relative; */
 	/* top: 0; */
 	/* bottom: 0; */
 	/* width: 100%; */
-
+	position: absolute;
+	z-index: 2;
 	width: 100%;
 	height: 100%;
 }
 
+#slider {
+	position: absolute;
+	z-index: 4;
+
+	-webkit-appearance: none;
+	width: 100%;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+
 /* ***************************************************** */
-/*                         SIDEBAR			             */
+/*                         rightside			             */
 /* ***************************************************** */
-.container nav {
-	grid-area: sidebar;
+.container #article-right {
+	grid-area: rightside;
 
 	/* development styling */
-	background-color: #9d00ff2e;
+	background-color: #9d00ff12;
 	border: 1px solid rgb(43, 43, 43);
 }
 
@@ -153,9 +245,9 @@ body {
 
 #tooltip {
 	visibility: hidden;
-	background-color: rgb(194, 194, 194);
+	background-color: rgba(194, 194, 194, 0.139);
 	border: 1px solid #000000;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	color: #000000;
 	position: absolute;
 	width: 15rem;
@@ -180,6 +272,17 @@ body {
 	grid-area: footer;
 
 	/* development styling */
-	background-color: #ff00842e;
+	background-color: #ff008409;
 	border: 1px solid rgb(43, 43, 43);
+	text-align: center;
+	padding-top: 10px;
+}
+
+.container footer a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.container footer a:hover {
+	text-decoration: underline;
 }

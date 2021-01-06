@@ -55,8 +55,10 @@ localhost:000
 
 ## :file_folder: Sources
 
+- [Mapbox](https://docs.mapbox.com/)
+- [Chart.js](https://www.chartjs.org/docs/latest/)
+- [Chart.js Datalable plugin](https://chartjs-plugin-datalabels.netlify.app/guide/getting-started.html#installation)
 
-- [Name source](website.com)
 
 ## :cop: License
 This project from [Ralf](https://github.com/ralfz123) has a [MIT © License](https://github.com/ralfz123/ring-ring/blob/main/LICENSE)
