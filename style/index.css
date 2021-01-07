@@ -94,7 +94,7 @@ header #info-button {
 	grid-area: info;
 	width: 20px;
 	margin: auto;
-	cursor: pointer;
+	cursor: help;
 }
 /* ***************************************************** */
 /*                         ASIDE		                 */

@@ -1,14 +1,15 @@
 const overlay = document.getElementById('instructions-overlay'); // Instructions-overlay in HTML
 const infoButton = document.getElementById('info-button'); // Info button ('i') in right top corner
 
-infoButton.addEventListener('click', handleEvent);
+infoButton.addEventListener('mouseover', handleEventMouseOver);
+infoButton.addEventListener('mouseout', handleEventMouseOut);
 
-// When map plot is clicked, tooltip will appear
-function handleEvent() {
-    console.log('clicked')
-	if (overlay.style.display === 'block') {
-		overlay.style.display = 'none';
-	} else {
-		overlay.style.display = 'block';
-	}
+// When mouse hovers over icon, overlay will appear
+function handleEventMouseOver() {
+	overlay.style.display = 'block';
+}
+
+// When mouse not hover anymore over icon, overlay will disappear
+function handleEventMouseOut() {
+	overlay.style.display = 'none';
 }
