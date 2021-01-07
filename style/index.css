@@ -73,6 +73,8 @@ header nav ul {
 
 header nav ul li {
 	display: inline;
+	margin-right: 2em;
+	font-size: 2em;
 }
 
 header nav ul li a {
@@ -81,7 +83,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-	color: blue;
+	color: #576399;
 }
 
 header nav ul li a:active {
@@ -161,7 +163,8 @@ header #info-button {
 }
 
 #filter-pattern button {
-	background-color: #1159c6;
+	/* background-color: #1159c6; */
+	background-color: #5ca9bd;
 	border: none;
 	border-radius: 5px;
 	color: #ffffff;
@@ -174,8 +177,9 @@ header #info-button {
 }
 
 #filter-pattern button:hover {
-	background-color: #112fc6;
-	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+	/* background-color: #112fc6; */
+	background-color: #576399;
+	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
 }
 
 #filter-pattern button:focus {
@@ -272,6 +276,28 @@ header #info-button {
 	margin-top: 2em;
 	margin-bottom: 0em;
 	font-size: 1.2em;
+}
+
+/* ***************************************************** */
+/*                         INFO-OVERLAY	                 */
+/* ***************************************************** */
+#instructions-overlay {
+	grid-area: content;
+	display: none;
+	width: 90%;
+	height: 90%;
+	position: absolute;
+	z-index: 2;
+	margin: 0 auto;
+	margin: 5px;
+	padding: 1em;
+	align-self: center;
+	justify-self: center;
+
+	background: #606060f0;
+	color: #ffffff;
+	border-radius: 10px;
+
 }
 
 /* ***************************************************** */
