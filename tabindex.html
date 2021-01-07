@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Application for Ring-Ring" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Ring-Ring | Dashboard</title>
+		<link
+			rel="shortcut icon"
+			type="image/svg"
+			href="assets/ringring-logo.svg"
+		/>
+		<link rel="stylesheet" href="style/index.css" />
+
+		<!-- font | Headers -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- font | Body text -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Chart.js -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+			integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Chartjs plugin Datalabels -->
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+
+		<!-- d3 | UNUSED -->
+		<!-- <script src="https://d3js.org/d3.v6.min.js"></script>
+		<script src="https://unpkg.com/topojson@3.0.2			/dist/topojson.min.js"></script>
+		<script src="https://d3js.org/d3-zoom.v2.min.js"></script>
+		<script src="https://unpkg.com/topojson@3"></script> -->
+
+		<!-- Mapbox -->
+		<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+		<link
+			href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<!-- PAGE 1 | Dashboard -->
+
+        <!-- header - dashboard -->
+        <header>
+            <img
+                id="logo"
+                src="assets/ringring-logo.svg"
+                alt="Ring-Ring-logo"
+            />
+
+		<div id="tab-dashboard" class="tabcontent">
+			<div class="nav-tabs">
+				<button
+					class="tablinks"
+					onclick="openPage(event, 'tab-dashboard')"
+					id="defaultOpen"
+				>
+					Dashboard
+				</button>
+				<button
+					class="tablinks"
+					onclick="openPage(event, 'tab-feedback')"
+				>
+					Feedback
+				</button>
+			</div>
+            <img id="info-button" src="assets/info-button.svg" alt="" />
+        </header>
+			<!-- main - dashboard -->
+
+			<h3>Dashboard</h3>
+			<p>Content here.</p>
+		</div>
+
+		<!-- -------------------------------------------------------------------------------- -->
+
+		<!-- PAGE 2 | Feedback -->
+
+        <!-- header - feedback -->
+<header>
+            <img
+                id="logo"
+                src="assets/ringring-logo.svg"
+                alt="Ring-Ring-logo"
+            />
+
+		<div id="tab-feedback" class="tabcontent">
+			<div class="nav-tabs">
+				<button
+					class="tablinks"
+					onclick="openPage(event, 'tab-dashboard')"
+					id="defaultOpen"
+				>
+					Dashboard
+				</button>
+				<button
+					class="tablinks"
+					onclick="openPage(event, 'tab-feedback')"
+				>
+					Feedback
+				</button>
+            </div>
+            <img id="info-button" src="assets/info-button.svg" alt="" />
+			</header>
+
+			<!-- main - feedback -->
+
+			<h3>Feedback</h3>
+			<p>Content here.</p>
+		</div>
+
+		<script src="script/handleTabs.js"></script>
+	</body>
+</html>

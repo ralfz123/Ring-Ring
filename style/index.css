@@ -23,7 +23,7 @@ button {
 
 /* ******************************************************************************************************* */
 
-.container {
+#dashboard-container {
 	/* background-color: rgba(128, 128, 128, 0.297); */
 	/* margin: 1rem; */
 	padding: 0;
@@ -43,7 +43,7 @@ button {
 /* ***************************************************** */
 /*                         HEADER		                 */
 /* ***************************************************** */
-.container header {
+#dashboard-container header {
 	grid-area: topbar;
 
 	display: grid;
@@ -102,7 +102,7 @@ header #info-button {
 /* ***************************************************** */
 /*                         ASIDE		                 */
 /* ***************************************************** */
-.container aside {
+#dashboard-container aside {
 	grid-area: leftside;
 
 	display: grid;
@@ -204,7 +204,7 @@ header #info-button {
 /* ***************************************************** */
 /*                         DATAVIZ		                 */
 /* ***************************************************** */
-.container article {
+#dashboard-container article {
 	grid-area: content;
 
 	/* development styling */
@@ -297,7 +297,7 @@ input[type='range'].MyClass-1::-webkit-slider-thumb {
 /*            DATAVIZ - TOOLTIP (overlay )    			 */
 /* ***************************************************** */
 
-.container #tooltip {
+#dashboard-container #tooltip {
 	/* grid-area: tooltip; */
 
 	display: none;
@@ -346,7 +346,7 @@ input[type='range'].MyClass-1::-webkit-slider-thumb {
 /* ***************************************************** */
 /*                         FOOTER		                 */
 /* ***************************************************** */
-.container footer {
+#dashboard-container footer {
 	grid-area: footer;
 
 	/* development styling */
@@ -358,16 +358,16 @@ input[type='range'].MyClass-1::-webkit-slider-thumb {
 	height: auto;
 }
 
-.container footer p {
+#dashboard-container footer p {
 	margin: 0;
 }
 
-.container footer a {
+#dashboard-container footer a {
 	color: #000000;
 	text-decoration: none;
 }
 
-.container footer a:hover {
+#dashboard-container footer a:hover {
 	text-decoration: underline;
 }
 
@@ -494,4 +494,17 @@ input[type='range'].MyClass-1::-webkit-slider-thumb {
 	border-radius: 20px;
 	text-align: center;
 	margin: 0;
+}
+
+/* tabs */
+/* feedback */
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+.active-tab {
+	color: red;
 }
