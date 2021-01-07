@@ -87,3 +87,5 @@ var myBarChart = new Chart(ctx, {
 		},
 	},
 });
+
+// export {myBarChart}
