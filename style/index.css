@@ -218,9 +218,9 @@ header #info-button {
 		'slider slider';
 
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 10fr 1fr;
+	grid-template-rows: 10fr auto;
 	/* grid-template-rows: 18fr 2fr; */
-	grid-gap: 3px;
+	grid-gap: 15px;
 }
 
 #map {
@@ -234,29 +234,64 @@ header #info-button {
 	height: 100%;
 }
 
+/* ***************************************************** */
+/*                         SLIDER		                 */
+/* ***************************************************** */
+
 #slider-wrapper {
 	grid-area: slider;
 	/* align-self: center; */
-
 	display: block;
 	border: 1px solid black;
+	padding: 0;
+	margin: 0;
 }
 
 #slider {
-	/* position: fixed; */
-	/* z-index: 4; */
+	-webkit-appearance: none;
 	padding: 0;
 	margin: 0;
 	width: 100%;
-	height: 25px;
-	-webkit-appearance: none;
+	/* height: 25px; */
+	background-color: #d3d3d3;
+	border-radius: 10px;
 
-	background: #d3d3d3;
 	outline: none;
 	opacity: 0.7;
 	-webkit-transition: 0.2s;
 	transition: opacity 0.2s;
 }
+
+/* slider track line */
+/* input[type='range']::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 1px;
+	cursor: pointer;
+	box-shadow: none;
+	background: #ffffff;
+	background-color: rgba(255, 0, 0, 0.29);
+	border-radius: 0px;
+	border: 0px solid #010101;
+	margin: 0;
+	padding: 0;
+} */
+
+/* Slider thumb */
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 60px;
+	width: 60px;
+	cursor: pointer;
+	background-image: url(../assets/cycle.svg);
+}
+
+/* input[type='range'].MyClass-1::-webkit-slider-thumb {
+	background-image: url(../assets/ringring-logo.svg);
+}
+
+input[type='range'].MyClass-1::-webkit-slider-thumb {
+	background-image: url(../assets/info-button.svg);
+} */
 
 /* ***************************************************** */
 /*            DATAVIZ - TOOLTIP (overlay )    			 */
@@ -288,7 +323,7 @@ header #info-button {
 }
 
 /* ***************************************************** */
-/*                         INFO-OVERLAY	                 */
+/*            DATAVIZ - INFO-OVERLAY	                 */
 /* ***************************************************** */
 #instructions-overlay {
 	grid-area: map;
