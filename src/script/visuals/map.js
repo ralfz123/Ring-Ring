@@ -1,7 +1,6 @@
-// ***
 mapboxgl.accessToken =
 	'pk.eyJ1IjoicmFsZjg4IiwiYSI6ImNrampzODg5MDFteTYycW83cWVoenZtaTgifQ.kLGZ-0NFqYzEtDLLEY5NbQ';
-var map = new mapboxgl.Map({
+export var map = new mapboxgl.Map({
 	container: 'map',
     // style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
     style: 'mapbox://styles/ralf88/ckjjswhgo0xlt19nxxqoky3dy',
