@@ -20,8 +20,13 @@ var myBarChart = new Chart(ctx, {
 	options: {
 		plugins: {
 			datalabels: {
-                anchor: 'center',
-                color: 'white'
+				anchor: 'center',
+				color: 'white',
+			},
+		},
+		legend: {
+			labels: {
+				fontFamily: "'Montserrat', sans-serif",
 			},
 		},
 
@@ -55,20 +60,28 @@ var myBarChart = new Chart(ctx, {
 				{
 					scaleLabel: {
 						display: true,
+						fontFamily: "'Montserrat', sans-serif",
+						fontSize: 15,
 						labelString: 'Ongelukken',
 					},
 					ticks: {
 						beginAtZero: true,
+						fontFamily: "'Montserrat', sans-serif",
 					},
 				},
 			],
 			xAxes: [
 				{
-                    scaleLabel: {
+					scaleLabel: {
 						display: true,
+						fontFamily: "'Montserrat', sans-serif",
+						fontSize: 15,
 						labelString: 'Leeftijd',
 					},
-                    barPercentage: 1,
+					barPercentage: 1,
+					ticks: {
+						fontFamily: "'Montserrat', sans-serif",
+					},
 				},
 			],
 		},

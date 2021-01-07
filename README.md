@@ -48,7 +48,7 @@ python -m SimpleHTTPServer 8000
 #### Visit project
 
 ```bash
-localhost:000
+localhost:8000
 ```
 
 ---

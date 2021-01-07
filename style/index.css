@@ -12,9 +12,7 @@
 /* ***************************************************** */
 body {
 	color: #000000;
-	/* font-family: 'VAG Rundschrift', sans-serif; */
-	/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-	font-family: 'Luckiest Guy', cursive;
+	font-family: 'Quicksand', sans-serif;
 }
 
 body p,
@@ -38,6 +36,7 @@ button {
 	grid-template-columns: 1fr 3fr 1fr;
 	/* grid-template-rows: 50px 650px 50px; */
 	grid-auto-rows: minmax(50px, auto);
+	/* grid-template-rows: auto auto auto; */
 	grid-gap: 3px;
 }
 
@@ -61,7 +60,8 @@ button {
 
 header #logo {
 	grid-area: logo;
-	width: 50px;
+	width: 70px;
+	align-self: center;
 }
 
 header nav ul {
@@ -92,8 +92,11 @@ header nav ul li a:active {
 
 header #info-button {
 	grid-area: info;
-	width: 20px;
-	margin: auto;
+	width: 30px;
+	/* margin: auto; */
+	justify-self: right;
+	align-self: center;
+	margin-right: 5em;
 	cursor: help;
 }
 /* ***************************************************** */
@@ -125,13 +128,8 @@ header #info-button {
 	background-color: rgba(194, 194, 194, 0.139);
 	color: #000000;
 	border: 1px solid #000000;
-	/* border-radius: 5px; */
-	position: absolute;
-	/* width: 30%;
-    max-width: 30%; */
 	padding: 0.5em;
-	/* margin-left: 0.5em;
-	margin-top: 3rem; */
+	padding-left: 1em;
 }
 
 #filter-pattern h2 {
@@ -215,33 +213,44 @@ header #info-button {
 	position: relative;
 
 	display: grid;
-	grid-template-areas: 'map tooltip';
+	grid-template-areas:
+		'map map'
+		'slider slider';
 
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
+	grid-template-rows: 10fr 1fr;
+	/* grid-template-rows: 18fr 2fr; */
+	grid-gap: 3px;
 }
 
 #map {
+	grid-area: map;
 	/* top: 0; */
 	/* bottom: 0; */
 	/* width: 100%; */
-	position: absolute;
+	position: absolute; /* not necessary*/
 	z-index: 1;
 	width: 100%;
 	height: 100%;
 }
 
 #slider-wrapper {
-	/* display:block; */
+	grid-area: slider;
+	/* align-self: center; */
+
+	display: block;
+	border: 1px solid black;
 }
 
 #slider {
-	position: fixed;
-	z-index: 4;
-
-	-webkit-appearance: none;
+	/* position: fixed; */
+	/* z-index: 4; */
+	padding: 0;
+	margin: 0;
 	width: 100%;
 	height: 25px;
+	-webkit-appearance: none;
+
 	background: #d3d3d3;
 	outline: none;
 	opacity: 0.7;
@@ -254,7 +263,7 @@ header #info-button {
 /* ***************************************************** */
 
 .container #tooltip {
-	grid-area: tooltip;
+	/* grid-area: tooltip; */
 
 	display: none;
 	background-color: #eaeaea;
@@ -282,7 +291,7 @@ header #info-button {
 /*                         INFO-OVERLAY	                 */
 /* ***************************************************** */
 #instructions-overlay {
-	grid-area: content;
+	grid-area: map;
 	display: none;
 	width: 90%;
 	height: 90%;
@@ -297,7 +306,6 @@ header #info-button {
 	background: #606060f0;
 	color: #ffffff;
 	border-radius: 10px;
-
 }
 
 /* ***************************************************** */
@@ -307,10 +315,16 @@ header #info-button {
 	grid-area: footer;
 
 	/* development styling */
-
 	border: 1px solid rgb(43, 43, 43);
+
 	text-align: center;
-	padding-top: 10px;
+	padding: 0px;
+	margin: 0;
+	height: auto;
+}
+
+.container footer p {
+	margin: 0;
 }
 
 .container footer a {
