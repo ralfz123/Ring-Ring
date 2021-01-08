@@ -6,10 +6,10 @@ infoButton.addEventListener('mouseout', handleEventMouseOut);
 
 // When mouse hovers over icon, overlay will appear
 function handleEventMouseOver() {
-	overlay.style.display = 'block';
+	overlay.style.visibility = 'visible';
 }
 
 // When mouse not hover anymore over icon, overlay will disappear
 function handleEventMouseOut() {
-	overlay.style.display = 'none';
+	overlay.style.visibility = 'hidden';
 }

@@ -1,5 +1,5 @@
-export var ctx = document.getElementById('myChart').getContext('2d');
-export var myBarChart = new Chart(ctx, {
+var ctx = document.getElementById('myChart').getContext('2d');
+var myBarChart = new Chart(ctx, {
 	type: 'bar',
 	data: {
 		labels: ['0-18', '18-30', '30-65', '65+'],
@@ -88,4 +88,3 @@ export var myBarChart = new Chart(ctx, {
 	},
 });
 
-// export {myBarChart}

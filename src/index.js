@@ -1,10 +1,10 @@
-import * as tooltip from 'script/elements/tooltip';
-import * as map from 'script/visuals/map';
-import * as resetbuttons from 'script/functionalities/resetButtons';
-import * as barchart from 'script/visuals/barchart';
-import * as slider from 'script/elements/slider';
-import * as overlay from 'script/elements/overlay';
-import * as handleTabs from 'script/functionalities/handleTabs';
+// import * as tooltip from 'script/elements/tooltip';
+// import * as map from 'script/visuals/map';
+// import * as resetbuttons from 'script/functionalities/resetButtons';
+// import * as barchart from 'script/visuals/barchart';
+// import * as slider from 'script/elements/slider';
+// import * as overlay from 'script/elements/overlay';
+// import * as handleTabs from 'script/functionalities/handleTabs';
 
 // Fetching data - API/gist
 // fetch('http://ringring.jorrr.nl/geojson-data-ringring.json')

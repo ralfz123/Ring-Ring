@@ -53,7 +53,7 @@
 		/>
 	</head>
 	<body>
-		<a style="display: none;" href="practise/tabindex.html">tabindex.html</a>
+		<a style="display: none" href="practise/tabindex.html">tabindex.html</a>
 		<div id="dashboard-container">
 			<!-- header -->
 			<header>
@@ -76,6 +76,50 @@
 			<!-- main -->
 
 			<aside>
+				<div id="instructions-overlay">
+					<div id="instructions-overlay-card1">
+						<h3>Instructie</h3>
+						<img
+							class="svgcard"
+							src="assets/info-button.svg"
+							alt=""
+						/>
+						<p>
+							Instructie-tekst hierr... Instructie-tekst hierr...
+							Instructie-tekst hierr... Instructie-tekst hierr...
+							Instructie-tekst hierr... Instructie-tekst hierr...
+						</p>
+					</div>
+
+					<div id="instructions-overlay-card2">
+						<h3>Instructie</h3>
+						<img
+							class="svgcard"
+							src="assets/info-button.svg"
+							alt=""
+						/>
+						<p>
+							Instructie-tekst hierr... Instructie-tekst hierr...
+							Instructie-tekst hierr... Instructie-tekst hierr...
+							Instructie-tekst hierr... Instructie-tekst hierr...
+						</p>
+					</div>
+
+					<div id="instructions-overlay-card3">
+						<h3>Instructie</h3>
+						<img
+							class="svgcard"
+							src="assets/info-button.svg"
+							alt=""
+						/>
+						<p>
+							Instructie-tekst hierr... Instructie-tekst hierr...
+							Instructie-tekst hierr... Instructie-tekst hierr...
+							Instructie-tekst hierr... Instructie-tekst hierr...
+						</p>
+					</div>
+				</div>
+
 				<div id="filter-pattern">
 					<section>
 						<h2>Leeftijd</h2>
@@ -138,12 +182,12 @@
 							<li>
 								<input
 									type="checkbox"
-									id="all-deadly"
-									value="all-deadly"
-									name="deadly"
+									id="accident-rating-all"
+									value="accident-rating-all"
+									name="accident-rating"
 									checked="checked"
 								/>
-								<label for="all-deadly">Alle</label>
+								<label for="all-accident-rating">Alle</label>
 							</li>
 
 							<li>
@@ -151,9 +195,9 @@
 									type="checkbox"
 									id="injured"
 									value="injured"
-									name="deadly"
+									name="accident-rating"
 								/>
-								<label for="injured">Lichtelijk gewond</label>
+								<label for="injured">Gewond</label>
 							</li>
 
 							<li>
@@ -161,16 +205,58 @@
 									type="checkbox"
 									id="dead"
 									value="dead"
-									name="deadly"
+									name="accident-rating"
 								/>
 								<label for="dead">Dodelijk</label>
 							</li>
 						</ul>
-
-						<button value="reset" name="reset" id="reset-button">
-							Reset
-						</button>
 					</section>
+
+					<section>
+						<h2>Jaartal</h2>
+						<ul>
+							<li>
+								<input
+									type="checkbox"
+									name="year"
+									id="2017"
+									value="2017"
+									checked="checked"
+								/>
+								<label for="2017">2017</label>
+							</li>
+							<li>
+								<input
+									type="checkbox"
+									name="year"
+									id="2018"
+									value="2018"
+								/>
+								<label for="2018">2018</label>
+							</li>
+							<li>
+								<input
+									type="checkbox"
+									name="year"
+									id="2019"
+									value="2019"
+								/>
+								<label for="2019">2019</label>
+							</li>
+							<li>
+								<input
+									type="checkbox"
+									name="year"
+									id="2020"
+									value="2020"
+								/>
+								<label for="2020">2020</label>
+							</li>
+						</ul>
+					</section>
+					<button value="reset" name="reset" id="reset-button">
+						Reset
+					</button>
 				</div>
 
 				<div id="chart-wrapper">
@@ -181,7 +267,7 @@
 			<article>
 				<div
 					id="map"
-					style="width: 100%; height: 100%; border-radius: 3px"
+					style="width: 100%; height: 100%; border-radius: 20px"
 				></div>
 
 				<!-- <div id="dataviz"></div>
@@ -201,17 +287,6 @@
 					x
 				</div>
 
-				<div id="slider-wrapper">
-					<!-- <p>2020</p> -->
-					<input
-						type="range"
-						id="slider"
-						min="2015"
-						max="2021"
-						value="2018"
-					/>
-				</div>
-
 				<div id="tooltip">
 					<h2>Fietsongeluk</h2>
 					<p>
@@ -219,19 +294,22 @@
 						<span id="tooltip-accident">Licht gewond</span>
 					</p>
 					<p>
-						Straat:
+						<img src="assets/icons/location.svg" alt="" />
 						<span id="tooltip-streetname">Olympiaplein</span>
 					</p>
-					<p>Leeftijd: <span id="tooltip-age">18</span></p>
+					<p>
+						<img src="assets/icons/calendar.svg" alt="" />
+						<span id="tooltip-age">18 jaar</span>
+					</p>
 
-					<h3>Weersomstandigheden</h3>
-					<p>Neerslag: <span id="tooltip-rainfall">0,2 mm</span></p>
-					<p>Wind: <span id="tooltip-wind">39 km/h</span></p>
-				</div>
-
-				<div id="instructions-overlay">
-					<h3>Instructie</h3>
-					<p>Instructie-tekst hierr...</p>
+					<p>
+						<img src="assets/icons/cloud.svg" alt="" />
+						<span id="tooltip-rainfall">0,2 mm</span>
+					</p>
+					<p>
+						<img src="assets/icons/wind.svg" alt="" />
+						<span id="tooltip-wind">39 km/h</span>
+					</p>
 				</div>
 			</article>
 
@@ -250,12 +328,12 @@
 
 		<!-- Script routes -->
 		<script src="index.js"></script>
-		<!-- <script src="script/elements/tooltip.js"></script>
+		<script src="script/elements/tooltip.js"></script>
 		<script src="script/visuals/map.js"></script>
 		<script src="script/functionalities/resetButtons.js"></script>
 		<script src="script/visuals/barchart.js"></script>
 		<script src="script/elements/slider.js"></script>
 		<script src="script/elements/overlay.js"></script>
-		<script src="script/functionalities/handleTabs.js"></script> -->
+		<script src="script/functionalities/handleTabs.js"></script>
 	</body>
 </html>

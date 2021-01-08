@@ -30,19 +30,25 @@
 			</header>
 
 			<main id="feedback-container">
+
 				<div id="feedback-filter">
-					<form action="/">
-						<label for="feedback-filter-categories"
-							>Sorteer🔻</label
-						>
-						<select name="feedback-filter-categories" id="">
-							<option value="volvo">Van hoog naar laag</option>
-							<option value="saab">Van laag naar hoog</option>
-						</select>
-					</form>
+					
+					<section id="feedback-filter-sort">
+						<form action="/">
+							<label for="feedback-filter-categories"
+								>Sorteer🔻</label
+							>
+							<select name="feedback-filter-categories" id="">
+								<option value="volvo">
+									Van hoog naar laag
+								</option>
+								<option value="saab">Van laag naar hoog</option>
+							</select>
+						</form>
+					</section>
 
 					<section id="feedback-filter-color">
-						<h3>Kleur</h3>
+						<h3>Review ranking</h3>
 						<button id="button-red"></button>
 						<button id="button-orange"></button>
 						<button id="button-green"></button>
@@ -51,7 +57,7 @@
 					<section id="feedback-filter-category">
 						<form action="/">
 							<label for="feedback-filter-categories"
-								>Categorie🔻</label
+								>Trefwoord</label
 							>
 							<select name="feedback-filter-categories" id="">
 								<option value="volvo">"Ongeluk"</option>

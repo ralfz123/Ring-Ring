@@ -3,7 +3,7 @@
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-export function openPage(evt, pageName) {
+function openPage(evt, pageName) {
 	// Declare all variables
 	var i, tabcontent, tablinks;
 
