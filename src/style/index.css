@@ -271,7 +271,7 @@ header #info-button {
 #dashboard-container #tooltip {
 	/* grid-area: tooltip; */
 
-	display: block;
+	display: none;
 	background-color: #ffffff;
 	border-radius: 20px;
 	color: #000000;
