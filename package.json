@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "eslint": "^7.17.0",
+    "mapbox-gl": "^2.0.1",
     "script": "^0.1.4"
   },
   "devDependencies": {
