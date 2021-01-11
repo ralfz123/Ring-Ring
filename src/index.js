@@ -28,25 +28,20 @@ fetchedData.then((response) => {
 // Clean data - makes new array with needed data variables
 function filteredDataset(nastyData) {
 	const cleanData = nastyData.map((element) => {
-		const object = {};
+		// const object = {};
 
-		console.log(
-			'2e rit - 1e dataTrack - lat',
-			nastyData[0].features[1].geometry.coordinates[0][1]
-		);
-		console.log(
-			'2e rit - 1e dataTrack - long',
-			nastyData[0].features[1].geometry.coordinates[0][0]
-		);
+		// console.log('2e rit - 1e dataTrack - lat', nastyData[0].features[1].geometry.coordinates[0][1]);
+		// console.log('2e rit - 1e dataTrack - long', nastyData[0].features[1].geometry.coordinates[0][0]);
+		
 		console.log('Alle ritten', nastyData[0].features);
 
 		// object.geometry.coordinates = element.geometry.coordinates;
 		// object.properties = element.properties;
 
-		(object.secondRideFirstTrackCoordinates =
-			element.features[1].geometry.coordinates[0]), // Must be in another variable for mapdots/routes
-			console.log('cleanData', cleanData);
-		return object; //maybe another way of coding this (vuurvos)
+		// object.secondRideFirstTrackCoordinates = element.features[1].geometry.coordinates[0]; // Must be in another variable for mapdots/routes
+		
+		console.log('cleanData', cleanData);
+		// return object; //maybe another way of coding this (vuurvos)
 	});
 }
 

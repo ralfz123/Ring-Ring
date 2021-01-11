@@ -27,6 +27,10 @@
 			rel="stylesheet"
 		/>
 
+		<!-- font Gotham -->
+		<!-- <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet"> -->
+		<!-- <link href="http://fonts.cdnfonts.com/css/gotham?styles=17581,17583,17585,17588" rel="stylesheet"> -->
+
 		<!-- Chart.js -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
@@ -70,58 +74,60 @@
 					</ul>
 				</nav>
 
-				<img id="info-button" src="assets/info-button.svg" alt="" />
+				<img id="info-button" src="assets/icons/help-icon.svg" alt="" />
 			</header>
 
 			<!-- main -->
 
 			<aside>
 				<div id="instructions-overlay">
-					<div id="instructions-overlay-card1">
-						<h3>Instructie</h3>
+					<div id="instructions-overlay-card1" class="instructions-overlay-card">
 						<img
 							class="svgcard"
-							src="assets/info-button.svg"
+							src="assets/icons/help-icon.svg"
 							alt=""
 						/>
+						<h3>Ring-Ring</h3>
+
 						<p>
-							Instructie-tekst hierr... Instructie-tekst hierr...
-							Instructie-tekst hierr... Instructie-tekst hierr...
-							Instructie-tekst hierr... Instructie-tekst hierr...
+							Ben jij benieuwd welke routes het meest veilig zijn
+							om te rijden? Want een road to safety… daar gaan wij
+							voor!
 						</p>
 					</div>
 
-					<div id="instructions-overlay-card2">
-						<h3>Instructie</h3>
+					<div id="instructions-overlay-card2" class="instructions-overlay-card">
 						<img
 							class="svgcard"
-							src="assets/info-button.svg"
+							src="assets/icons/help-icon.svg"
 							alt=""
 						/>
+						<h3>Dashboard</h3>
+
 						<p>
-							Instructie-tekst hierr... Instructie-tekst hierr...
-							Instructie-tekst hierr... Instructie-tekst hierr...
-							Instructie-tekst hierr... Instructie-tekst hierr...
+							Via het dashboard kun je verschillende ongelukken
+							bekijken van de desbetreffende leeftijden.
 						</p>
 					</div>
 
-					<div id="instructions-overlay-card3">
-						<h3>Instructie</h3>
+					<div id="instructions-overlay-card3" class="instructions-overlay-card">
 						<img
 							class="svgcard"
-							src="assets/info-button.svg"
+							src="assets/icons/help-icon.svg"
 							alt=""
 						/>
+						<h3>Feedback</h3>
+
 						<p>
-							Instructie-tekst hierr... Instructie-tekst hierr...
-							Instructie-tekst hierr... Instructie-tekst hierr...
-							Instructie-tekst hierr... Instructie-tekst hierr...
+							Sorteer en filter de feedback uit de Ring-Ring App.
+							Hierdoor kun je overzichtelijk waardevolle feedback
+							lezen!
 						</p>
 					</div>
 				</div>
 
 				<div id="filter-pattern">
-					<section>
+					<section id="filter-pattern-age">
 						<h2>Leeftijd</h2>
 						<ul>
 							<li>
@@ -176,8 +182,8 @@
 						</ul>
 					</section>
 
-					<section>
-						<h2>Ernst ongeval</h2>
+					<section id="filter-pattern-accident">
+						<h2>Ongeval</h2>
 						<ul>
 							<li>
 								<input
@@ -212,46 +218,51 @@
 						</ul>
 					</section>
 
-					<section>
+					<section id="filter-pattern-year">
 						<h2>Jaartal</h2>
 						<ul>
-							<li>
-								<input
-									type="checkbox"
-									name="year"
-									id="2017"
-									value="2017"
-									checked="checked"
-								/>
-								<label for="2017">2017</label>
-							</li>
-							<li>
-								<input
-									type="checkbox"
-									name="year"
-									id="2018"
-									value="2018"
-								/>
-								<label for="2018">2018</label>
-							</li>
-							<li>
-								<input
-									type="checkbox"
-									name="year"
-									id="2019"
-									value="2019"
-								/>
-								<label for="2019">2019</label>
-							</li>
-							<li>
-								<input
-									type="checkbox"
-									name="year"
-									id="2020"
-									value="2020"
-								/>
-								<label for="2020">2020</label>
-							</li>
+							<div id="filter-pattern-year-1">
+								<li>
+									<input
+										type="checkbox"
+										name="year"
+										id="2017"
+										value="2017"
+										checked="checked"
+									/>
+									<label for="2017">2017</label>
+								</li>
+								<li>
+									<input
+										type="checkbox"
+										name="year"
+										id="2018"
+										value="2018"
+									/>
+									<label for="2018">2018</label>
+								</li>
+							</div>
+
+							<div id="filter-pattern-year-2">
+								<li>
+									<input
+										type="checkbox"
+										name="year"
+										id="2019"
+										value="2019"
+									/>
+									<label for="2019">2019</label>
+								</li>
+								<li>
+									<input
+										type="checkbox"
+										name="year"
+										id="2020"
+										value="2020"
+									/>
+									<label for="2020">2020</label>
+								</li>
+							</div>
 						</ul>
 					</section>
 					<button value="reset" name="reset" id="reset-button">
@@ -267,7 +278,7 @@
 			<article>
 				<div
 					id="map"
-					style="width: 100%; height: 100%; border-radius: 20px"
+					style="width: 100%; height: 100%; /* border-radius: 20px */"
 				></div>
 
 				<!-- <div id="dataviz"></div>
