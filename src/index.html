@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Application for Ring-Ring" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Dashboard | Ring-Ring</title>
+		<link
+			rel="shortcut icon"
+			type="image/svg"
+			href="assets/ringring-logo.svg"
+		/>
+		<link rel="stylesheet" href="style/index.css" />
+
+		<!-- font | Headers -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- font | Body text -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- font Gotham -->
+		<!-- <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet"> -->
+		<!-- <link href="http://fonts.cdnfonts.com/css/gotham?styles=17581,17583,17585,17588" rel="stylesheet"> -->
+
+		<!-- Chart.js -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+			integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Chartjs plugin Datalabels -->
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+
+				<!-- Mapbox -->
+		<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+		<link
+			href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="dashboard-container">
+			<!-- header -->
+			<header>
+				<img
+					id="logo"
+					src="assets/ringring-logo.svg"
+					alt="Ring-Ring-logo"
+				/>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Dashboard</a></li>
+						<li><a href="feedback.html">Feedback</a></li>
+					</ul>
+				</nav>
+
+				<img id="info-button" src="assets/icons/help-icon.svg" alt="" />
+			</header>
+
+			<!-- main -->
+
+			<aside>
+				<div id="instructions-overlay">
+					<div
+						id="instructions-overlay-card1"
+						class="instructions-overlay-card"
+					>
+						<img
+							class="svgcard"
+							src="assets/icons/help-icon.svg"
+							alt=""
+						/>
+						<h3>Ring-Ring</h3>
+
+						<p>
+							Ben jij benieuwd welke routes het meest veilig zijn
+							om te rijden? Want een road to safety… daar gaan wij
+							voor!
+						</p>
+					</div>
+
+					<div
+						id="instructions-overlay-card2"
+						class="instructions-overlay-card"
+					>
+						<img
+							class="svgcard"
+							src="assets/icons/help-icon.svg"
+							alt=""
+						/>
+						<h3>Dashboard</h3>
+
+						<p>
+							Via het dashboard kun je verschillende ongelukken
+							bekijken van de desbetreffende leeftijden. Hier zijn
+							verschillende fietsroutes en fietsongelukken in
+							kaart gebracht.
+						</p>
+					</div>
+
+					<div
+						id="instructions-overlay-card3"
+						class="instructions-overlay-card"
+					>
+						<img
+							class="svgcard"
+							src="assets/icons/help-icon.svg"
+							alt=""
+						/>
+						<h3>Feedback</h3>
+
+						<p>
+							Sorteer en filter de feedback uit de Ring-Ring App.
+							Hierdoor kun je overzichtelijk waardevolle feedback
+							lezen!
+						</p>
+					</div>
+				</div>
+
+				<div id="filter-pattern">
+					<section id="filter-pattern-age">
+						<h2>Leeftijd</h2>
+						<ul>
+							<li>
+								<input
+									type="checkbox"
+									id="all-age"
+									value="all-age"
+									name="age"
+									checked="checked"
+								/>
+								<label for="all-age">Alle</label>
+							</li>
+
+							<li>
+								<input
+									type="checkbox"
+									id="0-18"
+									value="0-18"
+									name="age"
+								/>
+								<label for="0-18">0-18</label>
+							</li>
+
+							<li>
+								<input
+									type="checkbox"
+									id="18-30"
+									value="18-30"
+									name="age"
+								/>
+								<label for="18-30">18-30</label>
+							</li>
+
+							<li>
+								<input
+									type="checkbox"
+									id="30-65"
+									value="30-65"
+									name="age"
+								/>
+								<label for="30-65">30-65</label>
+							</li>
+							<li>
+								<input
+									type="checkbox"
+									id="65+"
+									value="65+"
+									name="age"
+								/>
+								<label for="65+">65+</label>
+							</li>
+						</ul>
+					</section>
+
+					<section id="filter-pattern-accident">
+						<h2>Ongeval</h2>
+						<ul>
+							<li>
+								<input
+									type="checkbox"
+									id="accident-rating-all"
+									value="accident-rating-all"
+									name="accident-rating"
+									checked="checked"
+								/>
+								<label for="all-accident-rating">Alle</label>
+							</li>
+
+							<li>
+								<input
+									type="checkbox"
+									id="injured"
+									value="injured"
+									name="accident-rating"
+								/>
+								<label for="injured">Gewond</label>
+							</li>
+
+							<li>
+								<input
+									type="checkbox"
+									id="dead"
+									value="dead"
+									name="accident-rating"
+								/>
+								<label for="dead">Dodelijk</label>
+							</li>
+						</ul>
+					</section>
+
+					<section id="filter-pattern-year">
+						<h2>Jaartal</h2>
+						<ul>
+							<div id="filter-pattern-year-1">
+								<li>
+									<input
+										type="radio"
+										name="year"
+										id="2017"
+										value="2017"
+										checked="checked"
+									/>
+									<label for="2017">2017</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										name="year"
+										id="2018"
+										value="2018"
+									/>
+									<label for="2018">2018</label>
+								</li>
+							</div>
+
+							<div id="filter-pattern-year-2">
+								<li>
+									<input
+										type="radio"
+										name="year"
+										id="2019"
+										value="2019"
+									/>
+									<label for="2019">2019</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										name="year"
+										id="2020"
+										value="2020"
+									/>
+									<label for="2020">2020</label>
+								</li>
+							</div>
+						</ul>
+					</section>
+					<button value="reset" name="reset" id="reset-button">
+						Reset
+					</button>
+				</div>
+
+				<div id="chart-wrapper">
+					<canvas id="myChart" width="400" height="400"></canvas>
+				</div>
+			</aside>
+
+			<article>
+				<div id="map" style="width: 100%; height: 100%"></div>
+
+				<!-- <div id="dataviz"></div>
+				<svg></svg> -->
+
+				<div
+					class="map-plot"
+					style="
+						position: absolute;
+						z-index: 2;
+						color: rgb(255, 55, 0);
+						font-size: 3em;
+						font-weight: 600;
+						font-family: Verdana, Geneva, Tahoma, sans-serif;
+					"
+				>
+					x
+				</div>
+
+				<div id="tooltip">
+					<h2>Fietsongeluk</h2>
+					<p>
+						Ongeval:
+						<span id="tooltip-accident">Licht gewond</span>
+					</p>
+					<p>
+						<img src="assets/icons/location.svg" alt="" />
+						<span id="tooltip-streetname">Olympiaplein</span>
+					</p>
+					<p>
+						<img src="assets/icons/calendar.svg" alt="" />
+						<span id="tooltip-age">18 jaar</span>
+					</p>
+
+					<p>
+						<img src="assets/icons/cloud.svg" alt="" />
+						<span id="tooltip-rainfall">0,2 mm</span>
+					</p>
+					<p>
+						<img src="assets/icons/wind.svg" alt="" />
+						<span id="tooltip-wind">39 km/h</span>
+					</p>
+				</div>
+			</article>
+
+			<!-- footer -->
+			<footer>
+				<p>
+					Ralf Zonneveld - Nassera Grampon - Lawrence Prins © 2021 -
+					<a
+						href="https://github.com/ralfz123/ring-ring"
+						target="_blank"
+						>GitHub Repository</a
+					>
+				</p>
+			</footer>
+		</div>
+
+		<!-- Script routes -->
+		<!-- <script src="index.js"></script> -->
+		<script src="script/elements/tooltip.js"></script>
+		<script src="script/visuals/map.js"></script>
+		<script src="script/functionalities/resetButtons.js"></script>
+		<script src="script/visuals/barchart.js"></script>
+		<!-- <script src="script/elements/slider.js"></script> -->
+		<script src="script/elements/overlay.js"></script>
+		<!-- <script src="script/functionalities/handleTabs.js"></script> -->
+	</body>
+</html>

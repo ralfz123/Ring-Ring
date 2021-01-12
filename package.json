@@ -4,11 +4,16 @@
   "description": "_Feedback feature upgrade for https://ring-ring.nu/_",
   "main": "index.js",
   "dependencies": {
-    "eslint": "^7.17.0"
+    "eslint": "^7.17.0",
+    "mapbox-gl": "^2.0.1",
+    "script": "^0.1.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",

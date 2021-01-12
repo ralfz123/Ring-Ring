@@ -5,9 +5,9 @@ mapPlot.addEventListener('click', handleEvent);
 
 // When map plot is clicked, tooltip will appear
 function handleEvent() {
-	if (tooltip.style.visibility === 'visible') {
-		tooltip.style.visibility = 'hidden';
+	if (tooltip.style.display === 'block') {
+		tooltip.style.display = 'none';
 	} else {
-		tooltip.style.visibility = 'visible';
+		tooltip.style.display = 'block';
 	}
 }
