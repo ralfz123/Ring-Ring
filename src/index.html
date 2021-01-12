@@ -43,7 +43,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 
-				<!-- Mapbox -->
+		<!-- Mapbox -->
 		<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
 		<link
 			href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
@@ -232,7 +232,7 @@
 										name="year"
 										id="2017"
 										value="2017"
-										checked="checked"
+										onChange="updateLegend()"
 									/>
 									<label for="2017">2017</label>
 								</li>
@@ -242,6 +242,7 @@
 										name="year"
 										id="2018"
 										value="2018"
+										onChange="updateLegend()"
 									/>
 									<label for="2018">2018</label>
 								</li>
@@ -254,6 +255,7 @@
 										name="year"
 										id="2019"
 										value="2019"
+										onChange="updateLegend()"
 									/>
 									<label for="2019">2019</label>
 								</li>
@@ -263,6 +265,8 @@
 										name="year"
 										id="2020"
 										value="2020"
+										onChange="updateLegend()"
+										checked="checked"
 									/>
 									<label for="2020">2020</label>
 								</li>
@@ -290,6 +294,7 @@
 					style="
 						position: absolute;
 						z-index: 2;
+						top: 350px;
 						color: rgb(255, 55, 0);
 						font-size: 3em;
 						font-weight: 600;
@@ -297,6 +302,12 @@
 					"
 				>
 					x
+				</div>
+
+				<div id="map-legend">
+					<h2>
+						Fietsongelukken <span id="map-legend-year">2020</span>
+					</h2>
 				</div>
 
 				<div id="tooltip">
@@ -344,8 +355,8 @@
 		<script src="script/visuals/map.js"></script>
 		<script src="script/functionalities/resetButtons.js"></script>
 		<script src="script/visuals/barchart.js"></script>
-		<!-- <script src="script/elements/slider.js"></script> -->
 		<script src="script/elements/overlay.js"></script>
 		<!-- <script src="script/functionalities/handleTabs.js"></script> -->
+		<script src="script/functionalities/handleFilterYear.js"></script>
 	</body>
 </html>
