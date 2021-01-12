@@ -27,10 +27,6 @@
 			rel="stylesheet"
 		/>
 
-		<!-- font Gotham -->
-		<!-- <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet"> -->
-		<!-- <link href="http://fonts.cdnfonts.com/css/gotham?styles=17581,17583,17585,17588" rel="stylesheet"> -->
-
 		<!-- Chart.js -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
@@ -54,15 +50,22 @@
 		<div id="dashboard-container">
 			<!-- header -->
 			<header>
-				<img
+				<!-- <img
 					id="logo"
 					src="assets/ringring-logo.svg"
 					alt="Ring-Ring-logo"
-				/>
+				/> -->
+
+				<h1>
+					RING<span style="color: var(--primary)">-</span
+					><span style="color: var(--secondary)">RING</span>
+				</h1>
 
 				<nav>
 					<ul>
-						<li><a href="index.html">Dashboard</a></li>
+						<li class="nav-selected">
+							<a href="index.html">Dashboard</a>
+						</li>
 						<li><a href="feedback.html">Feedback</a></li>
 					</ul>
 				</nav>
@@ -203,21 +206,21 @@
 							<li>
 								<input
 									type="checkbox"
-									id="injured"
-									value="injured"
-									name="accident-rating"
-								/>
-								<label for="injured">Gewond</label>
-							</li>
-
-							<li>
-								<input
-									type="checkbox"
 									id="dead"
 									value="dead"
 									name="accident-rating"
 								/>
 								<label for="dead">Dodelijk</label>
+							</li>
+
+							<li>
+								<input
+									type="checkbox"
+									id="injured"
+									value="injured"
+									name="accident-rating"
+								/>
+								<label for="injured">Gewond</label>
 							</li>
 						</ul>
 					</section>
@@ -279,6 +282,7 @@
 				</div>
 
 				<div id="chart-wrapper">
+					<!-- <h2>hoi</h2> -->
 					<canvas id="myChart" width="400" height="400"></canvas>
 				</div>
 			</aside>
@@ -286,28 +290,38 @@
 			<article>
 				<div id="map" style="width: 100%; height: 100%"></div>
 
-				<!-- <div id="dataviz"></div>
-				<svg></svg> -->
-
 				<div
 					class="map-plot"
 					style="
 						position: absolute;
 						z-index: 2;
 						top: 350px;
-						color: rgb(255, 55, 0);
-						font-size: 3em;
-						font-weight: 600;
-						font-family: Verdana, Geneva, Tahoma, sans-serif;
+						left: 20px;
+						background-color: rgb(255, 55, 0);
+						box-shadow: 0px 0px 30px red;
+						width: 30px;
+						height: 30px;
+						border-radius: 50px;
+						cursor: wait;
 					"
-				>
-					x
-				</div>
+				></div>
 
 				<div id="map-legend">
-					<h2>
+					<h2 id="map-legend-header">
 						Fietsongelukken <span id="map-legend-year">2020</span>
 					</h2>
+
+					<div id="map-legend-colors">
+						<div
+							class="map-legend-colors-dot map-legend-colors-dot-dead"
+						></div>
+						<p>Dodelijk</p>
+
+						<div
+							class="map-legend-colors-dot map-legend-colors-dot-injured"
+						></div>
+						<p>Gewond</p>
+					</div>
 				</div>
 
 				<div id="tooltip">

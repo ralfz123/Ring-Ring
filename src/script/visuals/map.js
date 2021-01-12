@@ -55,7 +55,7 @@ map.on('load', function () {
 			'line-cap': 'round',
 		},
 		paint: {
-			'line-color': '#928',
+			'line-color': '#3580cf',
 			'line-width': 1,
 		},
 	});

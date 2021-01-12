@@ -6,12 +6,12 @@ var myBarChart = new Chart(ctx, {
 		datasets: [
 			{
 				label: 'Man',
-				backgroundColor: '#5CA9BD',
+				backgroundColor: '#3580cf',
 				data: [3, 7, 4, 6],
 			},
 			{
 				label: 'Vrouw',
-				backgroundColor: '#576399',
+				backgroundColor: '#52556a',
 				data: [4, 3, 5, 8],
 				borderWidth: 1,
 			},
