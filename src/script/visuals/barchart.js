@@ -25,8 +25,11 @@ var myBarChart = new Chart(ctx, {
 			},
 		},
 		legend: {
+			position: 'bottom',
 			labels: {
 				fontFamily: "'Montserrat', sans-serif",
+				boxWidth: 12,
+				usePointStyle: true,
 			},
 		},
 
@@ -58,10 +61,15 @@ var myBarChart = new Chart(ctx, {
 		scales: {
 			yAxes: [
 				{
+					gridLines: {
+						drawBorder: false,
+						color: '#5252529a',
+					},
 					scaleLabel: {
 						display: true,
 						fontFamily: "'Montserrat', sans-serif",
-						fontSize: 15,
+						fontColor: '#f2f2f2',
+						fontSize: 12,
 						labelString: 'Ongelukken',
 					},
 					ticks: {
@@ -72,10 +80,14 @@ var myBarChart = new Chart(ctx, {
 			],
 			xAxes: [
 				{
+					gridLines: {
+						display: false,
+					},
 					scaleLabel: {
 						display: true,
 						fontFamily: "'Montserrat', sans-serif",
-						fontSize: 15,
+						fontColor: '#f2f2f2',
+						fontSize: 12,
 						labelString: 'Leeftijd',
 					},
 					barPercentage: 1,
@@ -87,4 +99,3 @@ var myBarChart = new Chart(ctx, {
 		},
 	},
 });
-

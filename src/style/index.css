@@ -236,7 +236,7 @@ header #info-button {
 	background: var(--primary);
 	border: none;
 	border-radius: 5px;
-	color: #ffffff;
+	color: #ffffffbf;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -252,6 +252,7 @@ header #info-button {
 	/* background-color: #112fc6; */
 	/* background-color: #576399; */
 	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
+	color: #ffffff;
 }
 
 #filter-pattern button:focus {
@@ -262,33 +263,25 @@ header #info-button {
 /*                        ASIDE - CHART			         */
 /* ***************************************************** */
 
-#chart-wrapper {
+#chart-part-wrapper {
 	grid-area: chart;
-	/* background-color: rgb(255, 255, 255); */
-	/* border-radius: 20px; */
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
-
-	/* display: grid;
-	grid-template-areas: 'head'
-						'chart';
-
-	grid-template-columns: 1fr;
-	grid-auto-rows: minmax(50px, auto); */
+	background: var(--layoutBlock);
+	text-align: center;
 }
-#chart-wrapper h2 {
-	/* grid-area: head; */
+#chart-part-wrapper h2 {
+	font-size: 1em;
 }
-#chart-wrapper canvas {
-	/* grid-area: chart; */
 
+#chart-part-wrapper #chart-wrapper canvas {
 	/* width: 100%; */
 	width: 100% !important;
 	height: 100% !important;
 	margin: 0;
 	padding-top: 0;
-	background: var(--layoutBlock);
+	/* background: var(--layoutBlock); */
 }
 /* ***************************************************** */
 /*                         DATAVIZ		                 */
@@ -343,11 +336,17 @@ header #info-button {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1em;
 	background: var(--layoutBlock);
-	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	/* -webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75); */
+	/* box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75); */
 	padding: 0.5em;
 	margin: 0;
+	width: 185px;
+	-webkit-box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.75);
+
+	/* box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.75); */
 }
 
 #map-legend-header #map-legend-year {
@@ -393,36 +392,110 @@ header #info-button {
 #dashboard-container #tooltip {
 	/* grid-area: tooltip; */
 
-	display: none;
-	background-color: #ffffff;
+	background: var(--mainBackground);
 	/* border-radius: 20px; */
-	color: #000000;
+	color: var(--mainText);
 	position: absolute;
 	z-index: 1;
-	padding: 0.7em;
+	/* padding: 0.7em; */
 	padding-top: 0em;
 	justify-self: right;
 	margin: 1rem;
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+
+	display: grid;
+	grid-template-areas:
+		'tooltip-header'
+		'tooltip-data'
+		'tooltip-source';
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 3fr 3fr;
+	/* grid-gap: 10px; */
+	display: none;
+
+}
+
+#tooltip #tooltip-header {
+	grid-area: tooltip-header;
+	padding: 0.7em;
+
+	border-left: 5px solid var(--additional2);
+	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	/* position: absolute;
+	z-index: 5; */
+}
+
+#tooltip-header h2 {
+	font-weight: 700;
+}
+
+#tooltip #tooltip-data {
+	grid-area: tooltip-data;
+	align-items: center;
+	justify-items: center;
+	padding: 0.7em;
+}
+
+#tooltip-data ul {
+	padding-left: 0;
+	list-style-type: none;
+	/* display: inline-block; */
+}
+
+#tooltip-data ul li {
+	/* display: block; */
+}
+
+#tooltip-data img {
+	margin: 5px 0px;
+}
+
+#tooltip-data p {
+	display: inline-block;
+
+	margin: 5px 0px;
+}
+
+#tooltip #tooltip-source {
+	grid-area: tooltip-source;
+	padding: 0.7em;
 }
 
 #tooltip span {
-	color: rgb(58, 58, 58);
+	/* color: rgb(58, 58, 58); */
 }
 
 #tooltip p img {
-	/* fill: red; */
 	filter: invert(27%) sepia(51%) saturate(78%) hue-rotate(346deg)
 		brightness(104%) contrast(97%) grayscale(1%);
+	opacity: 0.9;
 }
 
-/* #tooltip h3 {
-	margin-top: 2em;
-	margin-bottom: 0em;
-	font-size: 1.2em;
-} */
+#tooltip-button {
+	/* grid-area: button; */
+	background: var(--primary);
+	border: none;
+	border-radius: 5px;
+	color: #ffffffbf;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1em;
+	cursor: pointer;
+	width: 150px;
+	height: 32px;
+	align-self: center;
+	justify-self: center;
+	margin-top: 20px;
+}
+
+#tooltip-button:hover {
+	color: #ffffff;
+}
 
 /* ***************************************************** */
 /*            DATAVIZ - INFO-OVERLAY	                 */
@@ -521,7 +594,7 @@ header #info-button {
 #feedbackpage {
 	display: grid;
 	grid-template-areas:
-			'content	content	content'
+		'content	content	content'
 		'footer	footer	footer';
 
 	grid-template-columns: 1fr 3fr 1fr;
