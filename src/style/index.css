@@ -391,7 +391,6 @@ header #info-button {
 
 #dashboard-container #tooltip {
 	/* grid-area: tooltip; */
-
 	background: var(--mainBackground);
 	/* border-radius: 20px; */
 	color: var(--mainText);
@@ -414,7 +413,6 @@ header #info-button {
 	grid-template-rows: 1fr 3fr 3fr;
 	/* grid-gap: 10px; */
 	display: none;
-
 }
 
 #tooltip #tooltip-header {
