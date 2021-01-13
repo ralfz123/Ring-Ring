@@ -63,7 +63,7 @@ map.on('load', function () {
 
 // -----------------------------------------------------------------------------------------------------------------------------
 
-// tooltip - https://docs.mapbox.com/help/tutorials/create-interactive-hover-effects-with-mapbox-gl-js/
+// tooltip data html - https://docs.mapbox.com/help/tutorials/create-interactive-hover-effects-with-mapbox-gl-js/
 // hover - https://docs.mapbox.com/mapbox-gl-js/example/hover-styles/
 
 // Hover over mapplot - Tooltip
