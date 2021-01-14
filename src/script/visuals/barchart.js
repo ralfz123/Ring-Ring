@@ -1,5 +1,3 @@
-Chart.defaults.global.defaultFontColor = 'red';
-
 var ctx = document.getElementById('myChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
 	type: 'bar',
@@ -9,11 +7,14 @@ var myBarChart = new Chart(ctx, {
 			{
 				label: 'Man',
 				backgroundColor: '#3580cf',
+				fontColor: '#f2f2f2',
 				data: [3, 7, 4, 6],
+				borderWidth: 1,
 			},
 			{
 				label: 'Vrouw',
 				backgroundColor: '#52556a',
+				fontColor: '#f2f2f2',
 				data: [4, 3, 5, 8],
 				borderWidth: 1,
 			},
@@ -22,7 +23,7 @@ var myBarChart = new Chart(ctx, {
 	options: {
 		plugins: {
 			datalabels: {
-				anchor: 'center',
+				anchor: 'end',
 				color: 'white',
 			},
 		},
@@ -32,6 +33,7 @@ var myBarChart = new Chart(ctx, {
 				fontFamily: "'Montserrat', sans-serif",
 				boxWidth: 12,
 				usePointStyle: true,
+				fontColor: '#f2f2f2',
 			},
 		},
 
@@ -63,6 +65,8 @@ var myBarChart = new Chart(ctx, {
 		scales: {
 			yAxes: [
 				{
+					categoryPercentage: 1.0,
+					barPercentage: 0.1,
 					gridLines: {
 						drawBorder: false,
 						color: '#5252529a',

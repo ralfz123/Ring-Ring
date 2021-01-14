@@ -79,6 +79,14 @@ header #logo {
 	justify-self: center;
 }
 
+#logo span:nth-child(1) {
+	color: var(--primary);
+}
+
+#logo span:nth-child(2) {
+	color: var(--secondary);
+}
+
 header nav ul {
 	grid-area: nav;
 
@@ -504,21 +512,16 @@ header #info-button {
 /* ***************************************************** */
 #instructions-overlay {
 	/* grid-area: map; */
-	/* display: none; */
 	visibility: hidden;
-	/* width: 100%;
-	height: 55%; */
 	position: absolute;
 	z-index: 4;
-	/* top:100px; */
+	/* width: 95vw; */
+	/* height: 80vh; */
 	margin: 0 auto;
 	margin: 5px;
-	padding: 2em;
-	/* align-self: center; */
-	/* justify-self: center; */
-	background: #ebebeb;
-	color: #000000;
-	/* border-radius: 10px; */
+	padding: 4em 10em;
+	background: rgba(26, 28, 38, 0.85);
+	color: var(--mainText);
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
@@ -526,8 +529,9 @@ header #info-button {
 	display: grid;
 	grid-template-areas: 'card1 card2 card3';
 	grid-template-columns: 1fr 1fr 1fr;
+	/* grid-template-columns: 300px 300px 300px; */
 	grid-template-rows: 10fr;
-	grid-gap: 50px;
+	grid-gap: 60px;
 }
 
 #instructions-overlay-card1 {
@@ -547,21 +551,59 @@ header #info-button {
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
-	/* border-radius: 10px; */
-
-	/* padding: 2em; */
+	background: var(--layoutBlock);
+	padding: 2em;
 	text-align: center;
-	/* width: 25em; */
-	padding: 50px;
+
+	display: grid;
+	grid-template-areas:
+		'img'
+		'header'
+		'text';
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 10vh 20vh;
+	grid-gap: 5px;
 }
 
-.instructions-overlay-card p {
-	/* width: 50px; */
+#img-wrapper {
+	grid-area: img;
+	position: relative;
+	display: inline-block;
+	justify-self: center;
+	padding-top: 2em;
+}
+#img-wrapper::before {
+	content: ' ';
+	position: absolute;
+	margin: 0% 20%;
+	background: var(--secondary);
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
 }
 
-.svgcard {
+#img-wrapper .svg-card {
 	width: 250px;
-	height: 250px;
+	height: 156px;
+	position: relative;
+}
+
+.instructions-overlay-card h1 {
+	grid-area: header;
+	font-size: 2.5rem;
+}
+
+#instructions-overlay-card2 h1,
+#instructions-overlay-card3 h1 {
+	color: var(--primary);
+}
+
+.instructions-overlay-card div {
+	grid-area: text;
+}
+
+.instructions-overlay-card div p {
+	margin-bottom: 10px;
 }
 
 /* ***************************************************** */
