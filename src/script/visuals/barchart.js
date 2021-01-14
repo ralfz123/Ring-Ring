@@ -1,3 +1,5 @@
+Chart.defaults.global.defaultFontColor = 'red';
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
 	type: 'bar',
@@ -75,6 +77,7 @@ var myBarChart = new Chart(ctx, {
 					ticks: {
 						beginAtZero: true,
 						fontFamily: "'Montserrat', sans-serif",
+						fontColor: '#f2f2f2',
 					},
 				},
 			],
@@ -93,6 +96,7 @@ var myBarChart = new Chart(ctx, {
 					barPercentage: 1,
 					ticks: {
 						fontFamily: "'Montserrat', sans-serif",
+						fontColor: '#f2f2f2',
 					},
 				},
 			],
