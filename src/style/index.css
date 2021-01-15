@@ -249,6 +249,7 @@ header #info-button {
 	border: none;
 	border-radius: 5px;
 	color: #ffffffbf;
+	font-weight: 600;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -261,8 +262,6 @@ header #info-button {
 }
 
 #filter-pattern button:hover {
-	/* background-color: #112fc6; */
-	/* background-color: #576399; */
 	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
 	color: #ffffff;
 }
@@ -491,6 +490,7 @@ header #info-button {
 	border: none;
 	border-radius: 5px;
 	color: #ffffffbf;
+	font-weight: 600;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -505,6 +505,10 @@ header #info-button {
 
 #tooltip-button:hover {
 	color: #ffffff;
+}
+
+#tooltip-button:focus {
+	outline: none;
 }
 
 /* ***************************************************** */
