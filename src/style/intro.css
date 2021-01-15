@@ -1,0 +1,146 @@
+/* ***************************************************** */
+/*                         OVERALL                       */
+/* ***************************************************** */
+
+:root {
+	--mainText: #f2f2f2;
+	--mainBackground: #2a2c3c;
+	--layoutBlock: #2f3244;
+	--primary: #3580cf;
+	--secondary: #52556a;
+	--additional1: #e35e0d;
+	--additional2: #ce3636;
+	--buttonText: #b6d6f7;
+}
+* {
+	margin: 0;
+}
+/* ***************************************************** */
+/*                         BODY                          */
+/* ***************************************************** */
+body {
+	color: var(--mainText);
+	font-family: 'Quicksand', sans-serif;
+	background: var(--mainBackground);
+	overflow-y: scroll;
+}
+
+body p,
+label,
+button {
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* ******************************************************************************************************* */
+
+/* ***************************************************** */
+/*           INSTRUCTIONS                                */
+/* ***************************************************** */
+#instructions {
+	position: relative;
+	margin: 0 auto;
+	margin: 5px;
+	padding: 4em 10em;
+	/* background: rgba(26, 28, 38, 0.85); */
+	color: var(--mainText);
+	/* -webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 38px -16px rgba(0, 0, 0, 0.75); */
+
+	display: grid;
+	grid-template-areas: 'card1 card2 card3';
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 10fr;
+	grid-gap: 60px;
+}
+
+#instructions-card1 {
+	grid-area: card1;
+}
+
+#instructions-card2 {
+	grid-area: card2;
+}
+
+#instructions-card3 {
+	grid-area: card3;
+}
+
+.instructions-card {
+	background-color: #ffffff;
+	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.242);
+	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.242);
+	box-shadow: 6px 8px 18px rgba(0, 0, 0, 0.242);
+	background: var(--layoutBlock);
+	padding: 2em;
+	text-align: center;
+
+	display: grid;
+	grid-template-areas:
+		'img'
+		'header'
+		'text';
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 10vh 28vh;
+	grid-gap: 5px;
+}
+
+#img-wrapper {
+	grid-area: img;
+	position: relative;
+	display: inline-block;
+	justify-self: center;
+	padding-top: 2em;
+}
+#img-wrapper::before {
+	content: ' ';
+	position: absolute;
+	margin: 0% 20%;
+	background: var(--secondary);
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+}
+
+#img-wrapper .svg-card {
+	width: 250px;
+	height: 156px;
+	position: relative;
+}
+
+.instructions-card h1 {
+	grid-area: header;
+	font-size: 2.5rem;
+}
+
+#instructions-card2 h1,
+#instructions-card3 h1 {
+	color: var(--primary);
+}
+
+.instructions-card div {
+	grid-area: text;
+}
+
+.instructions-card div p {
+	margin-bottom: 10px;
+}
+
+#start-button {
+	grid-column: 2;
+	background: var(--primary);
+	border: none;
+	border-radius: 5px;
+	color: #ffffffbf;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+	cursor: pointer;
+	padding: 6px;
+	font-weight: 600;
+}
+
+#start-button:hover {
+	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
+	color: #ffffff;
+}
