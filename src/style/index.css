@@ -561,7 +561,7 @@ header #info-button {
 		'header'
 		'text';
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 10vh 20vh;
+	grid-template-rows: 1fr 10vh 28vh;
 	grid-gap: 5px;
 }
 

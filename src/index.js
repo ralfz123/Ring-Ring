@@ -6,43 +6,54 @@
 // import * as overlay from 'script/elements/overlay';
 // import * as handleTabs from 'script/functionalities/handleTabs';
 
-// Fetching data - API/gist
-// fetch('http://ringring.jorrr.nl/geojson-data-ringring.json')
-// 	.then(response => response.json())
-//     .then((dataRingRing) => console.log('dataRingRing=', dataRingRing));
 
-// let dataRingRing;
+// ------------------ RingRing data fetch -------------------------------------
 
-// const endpointOne = 'https://gist.githubusercontent.com/joordy/a143d68573aa3dcaadcb34defb2745a4/raw/43267958a9135359da69478b089e0c360b441af3/ringring.json';
+// Endpoint Ring-Ring data (cycle routes)
 const endpointOne =
-	'https://cors-anywhere.herokuapp.com/http://ringring.jorrr.nl/geojson-data-ringring.json'; // Endpoint Ring-Ring data (cycle routes)
+	'https://cors-anywhere.herokuapp.com/http://ringring.jorrr.nl/geojson-data-ringring.json'; //
 
-const fetchedData = fetch(endpointOne).then((response) => response.json()); // Parses JSON data
+// Fetching data - API/gist
+// fetch(endpointOne)
+// 	.then((response) => response.json())
+// 	.then((dataRingRing) => console.log('dataRingRing=', dataRingRing));
 
-// Getting both datasets through an Promise.all (is solved when all promises above get resolved)
-fetchedData.then((response) => {
-	let receivedData = response;
-	filteredDataset(receivedData);
-});
 
-// Clean data - makes new array with needed data variables
-function filteredDataset(nastyData) {
-	const cleanData = nastyData.map((element) => {
-		// const object = {};
+// async function setupMapData() {
+//   let rawData = await getData();
+//   drawMap(rawData);
+//   console.log(rawData)
+// }
 
-		// console.log('2e rit - 1e dataTrack - lat', nastyData[0].features[1].geometry.coordinates[0][1]);
-		// console.log('2e rit - 1e dataTrack - long', nastyData[0].features[1].geometry.coordinates[0][0]);
-		
-		console.log('Alle ritten', nastyData[0].features);
+// async function getData() {
+//   const response = await fetch(endpointOne);
+//   const json = await response.json();
+//   return await json;
+// }
 
-		// object.geometry.coordinates = element.geometry.coordinates;
-		// object.properties = element.properties;
 
-		// object.secondRideFirstTrackCoordinates = element.features[1].geometry.coordinates[0]; // Must be in another variable for mapdots/routes
-		
-		console.log('cleanData', cleanData);
-		// return object; //maybe another way of coding this (vuurvos)
-	});
-}
 
-// const combinedData =[cleanDataDay];
+
+
+// ------------------ Cycle Accidents data fetch -------------------------------------
+
+// Endpoint Cycle accidents data (gist)
+// const endpointTwo =
+// 	'https://gist.githubusercontent.com/ralfz123/d5946b682461a96c7e430f303610320f/raw/5865ec4d03495edcd9537cac8aba557a099ea556/accidents_data.json';
+
+// fetch(endpointTwo)
+// 	.then((response) => response.json())
+// 	.then((cycleAccidentsData) =>
+// 		console.log('cycleAccidentsData=', cycleAccidentsData)
+// 	);
+//
+//let data = cycleAccidentsData;
+// export { data };
+
+// 1. Jordy zijn fetch methode zien
+// Data succesvol ophalen
+// Multiple api data
+// 2. loading scherm - filmpje laten zien
+
+
+

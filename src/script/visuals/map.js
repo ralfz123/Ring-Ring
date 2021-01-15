@@ -1,3 +1,7 @@
+// import {data} from '../../index'
+
+// console.log('MAP: data -', data)
+
 mapboxgl.accessToken =
 	'pk.eyJ1IjoicmFsZjg4IiwiYSI6ImNrampzODg5MDFteTYycW83cWVoenZtaTgifQ.kLGZ-0NFqYzEtDLLEY5NbQ';
 const map = new mapboxgl.Map({
@@ -46,6 +50,13 @@ map.on('load', function () {
 			'https://cors-anywhere.herokuapp.com/http://ringring.jorrr.nl/geojson-data-ringring.json',
 	});
 
+	// fetch external API and then put it in the data var below, then it can be plotted as expected
+	map.addSource('accidents', {
+		type: 'geojson',
+		data:
+			'https://gist.githubusercontent.com/ralfz123/506502be46c91f5b5951e85f1b7c665b/raw/d64f127cd93cac901739745cfdb7807b776b6506/accidents_data.geojson',
+	});
+
 	map.addLayer({
 		id: 'route',
 		type: 'line',
@@ -59,7 +70,69 @@ map.on('load', function () {
 			'line-width': 1,
 		},
 	});
+
+	map.addLayer({
+		id: 'accidents',
+		type: 'circle',
+		source: 'accidents',
+		paint: {
+			// 'circle-stroke-color': 'blue',
+			// 'circle-stroke-width': 3,
+			'circle-color': '#ce3636',
+			// 'circle-radius': {
+			// 	'base': 1.75,
+			// 	'stops': [
+			// 	[12, 2],
+			// 	[22, 180]
+			// 	]
+			// 	},
+		},
+	});
 });
+
+
+
+// data dynamic 🚨 - https://docs.mapbox.com/help/tutorials/create-interactive-hover-effects-with-mapbox-gl-js/#define-the-hover-attribute
+
+// var quakeID = null;
+
+// map.on('mousemove', 'earthquakes-viz', (e) => {
+
+//   map.getCanvas().style.cursor = 'pointer';
+//   // Set variables equal to the current feature's magnitude, location, and time
+//   var quakeMagnitude = e.features[0].properties.mag;
+//   var quakeLocation = e.features[0].properties.place;
+//   var quakeDate = new Date(e.features[0].properties.time);
+
+//   // Check whether features exist
+//   if (e.features.length > 0) {
+//     // Display the magnitude, location, and time in the sidebar
+//     magDisplay.textContent = quakeMagnitude;
+//     locDisplay.textContent = quakeLocation;
+//     dateDisplay.textContent = quakeDate;
+
+//     // If quakeID for the hovered feature is not null,
+//     // use removeFeatureState to reset to the default behavior
+//     if (quakeID) {
+//       map.removeFeatureState({
+//         source: "earthquakes",
+//         id: quakeID
+//       });
+//     }
+
+//     quakeID = e.features[0].id;
+
+//     // When the mouse moves over the earthquakes-viz layer, update the
+//     // feature state for the feature under the mouse
+//     map.setFeatureState({
+//       source: 'earthquakes',
+//       id: quakeID,
+//     }, {
+//       hover: true
+//     });
+
+//   }
+// });
 
 // -----------------------------------------------------------------------------------------------------------------------------
 
@@ -96,3 +169,39 @@ map.on('load', function () {
 // });
 
 // -----------------------------------------------------------------------------------------------------------------------------
+const endpointTwo =
+	'https://gist.githubusercontent.com/ralfz123/d5946b682461a96c7e430f303610320f/raw/5865ec4d03495edcd9537cac8aba557a099ea556/accidents_data.json';
+
+// fetch(endpointTwo)
+// 	.then((response) => response.json())
+// 	.then((cycleAccidentsData) =>
+// 		console.log('cycleAccidentsData=', cycleAccidentsData)
+// 	);
+
+// 	let cycleAccidentsData;
+// 	console.log('cycleAccidentsData', cycleAccidentsData)
+
+// for loop
+
+// ------------------ SCRIPTING / FUNCTIONS ------------------------------------------------------------
+
+// scripting function
+// HTML elements that will be dynamic
+let streetname = document.getElementById('tooltip-data-streetname');
+let age = document.getElementById('tooltip-data-age');
+let rainfall = document.getElementById('tooltip-data-rainfall');
+let wind = document.getElementById('tooltip-data-wind');
+
+// Example data
+let dataStreetname = 'Karolano';
+let dataAge = 30;
+let dataRainfall = 013;
+let dataWind = 10000;
+
+// Function that replace the values of the HTML elements with dynamic data
+streetname.innerHTML = dataStreetname;
+age.innerHTML = dataAge;
+rainfall.innerHTML = dataRainfall;
+wind.innerHTML = dataWind;
+
+// ------------------------------------------------------------------------------

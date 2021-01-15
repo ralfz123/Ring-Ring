@@ -74,10 +74,19 @@
 				</div>
 				<h1 id="logo">RING<span>-</span><span>RING</span></h1>
 
-				<p>
-					Ben jij benieuwd welke routes het meest veilig zijn om te
-					rijden? Want een road to safety… daar gaan wij voor!
-				</p>
+				<div>
+					<p>
+						Fietsongelukken zijn een blinde vlek in Nederland,
+						waardoor er geen overzicht in kaart is gebracht op welke
+						fietsroutes de meeste fietsongelukken gebeuren en/-of
+						voortkomen.
+					</p>
+					<p style="font-style: italic">
+						De data van de fietsroutes zijn afkomstig uit de
+						Ring-Ring applicatie en de data van de fietsongelukken
+						komen uit verschillende nieuwsbronnen.
+					</p>
+				</div>
 			</div>
 
 			<div
@@ -117,10 +126,16 @@
 				</div>
 				<h1>Feedback</h1>
 
-				<p>
-					Sorteer en filter de feedback uit de Ring-Ring App. Hierdoor
-					kun je overzichtelijk waardevolle feedback lezen!
-				</p>
+				<div>
+					<p>
+						Sorteer en filter de feedback uit de Ring-Ring App op
+						review ranking, trefwoorden, relevantie of meest recent.
+					</p>
+					<p>
+						Hierdoor kun je overzichtelijk waardevolle feedback
+						lezen!
+					</p>
+				</div>
 			</div>
 		</div>
 		<div id="dashboard-container">
@@ -336,17 +351,23 @@
 
 							<li>
 								<img src="assets/icons/calendar.svg" alt="" />
-								<p id="tooltip-data-age">18 jaar</p>
+								<p>
+									<span id="tooltip-data-age">18</span> jaar
+								</p>
 							</li>
 
 							<li>
 								<img src="assets/icons/cloud.svg" alt="" />
-								<p id="tooltip-data-rainfall">0,2 mm</p>
+								<p>
+									<span id="tooltip-data-rainfall">0,2</span>
+									mm
+								</p>
 							</li>
-
 							<li>
 								<img src="assets/icons/wind.svg" alt="" />
-								<p id="tooltip-data-wind">39 km/h</p>
+								<p>
+									<span id="tooltip-data-wind">39</span> km/h
+								</p>
 							</li>
 						</ul>
 					</div>
@@ -383,13 +404,13 @@
 		</div>
 
 		<!-- Script routes -->
-		<!-- <script src="index.js"></script> -->
+		<script src="index.js"></script>
 		<script src="script/elements/tooltip.js"></script>
 		<script src="script/visuals/map.js"></script>
 		<script src="script/functionalities/resetButtons.js"></script>
 		<script src="script/visuals/barchart.js"></script>
 		<script src="script/elements/overlay.js"></script>
-		<!-- <script src="script/functionalities/handleTabs.js"></script> -->
 		<script src="script/functionalities/handleFilterYear.js"></script>
+		<script src="script/functionalities/handleTooltip.js"></script>
 	</body>
 </html>
