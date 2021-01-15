@@ -54,7 +54,7 @@ map.on('load', function () {
 	map.addSource('outcome', {
 		type: 'geojson',
 		data:
-			'https://gist.githubusercontent.com/ralfz123/506502be46c91f5b5951e85f1b7c665b/raw/d64f127cd93cac901739745cfdb7807b776b6506/accidents_data.geojson',
+			'https://gist.githubusercontent.com/ralfz123/997c3f3bd1a9a6aac5c915cff4dcf88c/raw/c9163cf56030724ad7b4c0d2deb42802b295a6ba/accidents_data-2.geojson',
 	});
 
 	map.addLayer({
@@ -67,7 +67,8 @@ map.on('load', function () {
 		},
 		paint: {
 			'line-color': '#3580cf',
-			'line-width': 1,
+			'line-width': 0.7,
+			'line-opacity': 0.8,
 		},
 	});
 
@@ -76,18 +77,19 @@ map.on('load', function () {
 		type: 'circle',
 		source: 'outcome',
 		paint: {
-			// 'circle-stroke-color': 'blue',
-			// 'circle-stroke-width': 1,
+			'circle-stroke-color': 'black',
+			'circle-stroke-width': 1,
 			'circle-color': 'white',
-			// Zoom in at scrolling
-			// 'circle-radius': {
-			// 	'base': 1.75,
-			// 	'stops': [
-			// 	[12, 2],
-			// 	[22, 180]
-			// 	]
-			// 	},
+			'circle-radius': {
+				stops: [
+					[1, 11],
+					[8, 10],
+					[11, 9],
+					[16, 8],
+				],
+			},
 
+			// https://docs.mapbox.com/mapbox-gl-js/example/data-driven-circle-colors/
 			'circle-color': [
 				'match',
 				['get', 'outcome'],
@@ -96,6 +98,9 @@ map.on('load', function () {
 				['Gewond', 'gewond'],
 				'#e35e0d',
 
+				// box-shadow: 0px 0px 30px red;
+				// cursoir: drag
+
 				/* fallback */ '#ccc',
 			],
 		},
@@ -103,80 +108,73 @@ map.on('load', function () {
 
 	var quakeID = null;
 
-
-
-
-
-	map.on('mousemove', 'accidents-viz', (e) => {
+	map.on('click', 'accidents-viz', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
+		document.getElementById('tooltip').style.display = 'block';
+
 		// Set variables equal to the current feature's magnitude, location, and time
 		var accidentOutcome = e.features[0].properties.outcome;
 		var accidentStreet = e.features[0].properties.street;
 		var accidentAge = e.features[0].properties.age;
-		// var accidentImage = e.features[0].properties.image_article_site;
-		// var accidentUrl = e.features[0].properties.url_site;
+		var accidentImage = e.features[0].properties.image_article_site;
+		var accidentUrl = e.features[0].properties.url_site;
+		var accidentSourceDate = e.features[0].properties.date_publicated;
+		var acccidentSource = e.features[0].properties.source;
 
 		// Check whether features exist
 		if (e.features.length > 0) {
-
 			let outcome = document.getElementById('tooltip-data-accident');
 			let streetname = document.getElementById('tooltip-data-streetname');
 			let age = document.getElementById('tooltip-data-age');
+			let image = document.getElementById('tooltip-data-image'); // This one I have to research on how to replace the IMAGE link
+			let url = document.getElementById('tooltip-data-url'); // This one I have to research on how to replace the URL
+			let date = document.getElementById('tooltip-data-date-publicated');
+			let source = document.getElementById('tooltip-data-source');
 
-
-			// Display the magnitude, location, and time in the sidebar
+			// Display the data in the tooltip
 			outcome.textContent = accidentOutcome;
 			streetname.textContent = accidentStreet;
 			age.textContent = accidentAge;
-			// magDisplay.textContent = accidentImage;
-			// magDisplay.textContent = accidentUrl;
-
-
-						
+			image.src = accidentImage;
+			url.href = accidentUrl;
+			date.textContent = accidentSourceDate;
+			source.textContent = acccidentSource;
 
 			// If quakeID for the hovered feature is not null,
 			// use removeFeatureState to reset to the default behavior
-			if (quakeID) {
-				map.removeFeatureState({
-					source: 'earthquakes',
-					id: quakeID,
-				});
-			}
+			// if (quakeID) {
+			// 	map.removeFeatureState({
+			// 		source: 'earthquakes',
+			// 		id: quakeID,
+			// 	});
+			// }
 
-			quakeID = e.features[0].id;
+			// quakeID = e.features[0].id;
 
 			// When the mouse moves over the earthquakes-viz layer, update the
 			// feature state for the feature under the mouse
-			map.setFeatureState(
-				{
-					source: 'earthquakes',
-					id: quakeID,
-				},
-				{
-					hover: true,
-				}
-			);
+			// map.setFeatureState(
+			// 	{
+			// 		source: 'earthquakes',
+			// 		id: quakeID,
+			// 	},
+			// 	{
+			// 		hover: true,
+			// 	}
+			// );
 		}
 	});
+
+	// Change the cursor to a pointer when the mouse is over the places layer.
+	map.on('mouseenter', 'places', function () {
+		map.getCanvas().style.cursor = 'pointer';
+	});
+
+	// Change it back to a pointer when it leaves.
+	map.on('mouseleave', 'places', function () {
+		map.getCanvas().style.cursor = '';
+	});
 });
-
-// ------------------ SCRIPTING / FUNCTIONS ------------------------------------------------------------
-
-// scripting function
-// HTML elements that will be dynamic
-// let outcome = document.getElementById('tooltip-data-accident');
-// let streetname = document.getElementById('tooltip-data-streetname');
-// let age = document.getElementById('tooltip-data-age');
-// let rainfall = document.getElementById('tooltip-data-rainfall');
-// let wind = document.getElementById('tooltip-data-wind');
-
-// Function that replace the values of the HTML elements with dynamic data
-// streetname.innerHTML = dataStreetname;
-// age.innerHTML = dataAge;
-// rainfall.innerHTML = dataRainfall;
-// wind.innerHTML = dataWind;
-
-// ------------------------------------------------------------------------------
 
 // data dynamic 🚨 - https://docs.mapbox.com/help/tutorials/create-interactive-hover-effects-with-mapbox-gl-js/#define-the-hover-attribute
 

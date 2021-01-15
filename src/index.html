@@ -302,22 +302,6 @@
 			<article>
 				<div id="map" style="width: 100%; height: 100%"></div>
 
-				<div
-					class="map-plot"
-					style="
-						position: absolute;
-						z-index: 2;
-						top: 350px;
-						left: 20px;
-						background-color: rgb(255, 55, 0);
-						box-shadow: 0px 0px 30px red;
-						width: 30px;
-						height: 30px;
-						border-radius: 50px;
-						cursor: wait;
-					"
-				></div>
-
 				<div id="map-legend">
 					<h2 id="map-legend-header">
 						Fietsongelukken <span id="map-legend-year">2020</span>
@@ -339,53 +323,53 @@
 				<div id="tooltip">
 					<div id="tooltip-header">
 						<h2>Fietsongeluk</h2>
-						<p id="tooltip-data-accident">Dodelijk</p>
+						<p id="tooltip-data-accident"></p>
 					</div>
 
 					<div id="tooltip-data">
 						<ul>
 							<li>
 								<img src="assets/icons/location.svg" alt="" />
-								<p id="tooltip-data-streetname">Olympiaplein</p>
+								<p id="tooltip-data-streetname"></p>
 							</li>
 
 							<li>
 								<img src="assets/icons/calendar.svg" alt="" />
-								<p>
-									<span id="tooltip-data-age">18</span> jaar
-								</p>
+								<p><span id="tooltip-data-age"></span> jaar</p>
 							</li>
 
 							<li>
 								<img src="assets/icons/cloud.svg" alt="" />
 								<p>
-									<span id="tooltip-data-rainfall">0,2</span>
+									<span id="tooltip-data-rainfall">2,2</span>
 									mm
 								</p>
 							</li>
 							<li>
 								<img src="assets/icons/wind.svg" alt="" />
-								<p>
-									<span id="tooltip-data-wind">39</span> km/h
-								</p>
+								<p><span id="tooltip-data-wind">33</span> km/h</p>
 							</li>
 						</ul>
 					</div>
 
 					<div id="tooltip-source">
 						<img
-							src="https://media.at5.nl/images/462277.f63676d.webp?width=1000&ratio=16:9&quality=80"
-							alt=""
-							style="width: 150px"
+							id="tooltip-data-image"
+							alt="Afbeelding nieuwsartikel"
 						/>
-						<p>Nieuwsartikel</p>
-						<button
-							id="tooltip-button"
-							onclick="window.location.href='https://google.com';"
+						<p>Nieuwsartikel, gepubliceerd op</p>
+						<p id="tooltip-data-date-publicated">01-01-2020</p>
+						<p id="tooltip-data-source" style="font-style: italic">
+							AT5.nl
+						</p>
+						<a
+							id="tooltip-data-url"
+							class="tooltip-button"
+							href="https://google.com"
 							target="_blank"
 						>
 							Lees meer
-						</button>
+						</a>
 					</div>
 				</div>
 			</article>
@@ -405,7 +389,7 @@
 
 		<!-- Script routes -->
 		<script src="index.js"></script>
-		<script src="script/elements/tooltip.js"></script>
+		<!-- <script src="script/elements/tooltip.js"></script> -->
 		<script src="script/visuals/map.js"></script>
 		<script src="script/functionalities/resetButtons.js"></script>
 		<script src="script/visuals/barchart.js"></script>

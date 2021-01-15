@@ -423,7 +423,8 @@ header #info-button {
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 3fr 3fr;
 	/* grid-gap: 10px; */
-	display: block;
+	display: none;
+	width: 400px;
 }
 
 #tooltip #tooltip-header {
@@ -465,13 +466,23 @@ header #info-button {
 
 #tooltip-data p {
 	display: inline-block;
-
 	margin: 5px 0px;
+	font-size: 0.9em;
 }
 
 #tooltip #tooltip-source {
 	grid-area: tooltip-source;
 	padding: 0.7em;
+}
+
+#tooltip-source p {
+	margin-top: 10px;
+}
+
+#tooltip-source img {
+	height: 120px;
+	width: auto;
+	background-color: var(--secondary);
 }
 
 #tooltip span {
@@ -484,30 +495,31 @@ header #info-button {
 	opacity: 0.9;
 }
 
-#tooltip-button {
+.tooltip-button {
 	/* grid-area: button; */
 	background: var(--primary);
-	border: none;
-	border-radius: 5px;
-	color: #ffffffbf;
-	font-weight: 600;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 1em;
-	cursor: pointer;
-	width: 150px;
-	height: 32px;
-	align-self: center;
-	justify-self: center;
-	margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffffbf;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    width: 150px;
+    /* height: 28px; */
+    /* align-self: center; */
+    /* justify-self: center; */
+    margin-top: 20px;
+    padding: 5px;
 }
 
-#tooltip-button:hover {
+.tooltip-button:hover {
 	color: #ffffff;
 }
 
-#tooltip-button:focus {
+.tooltip-button:focus {
 	outline: none;
 }
 
