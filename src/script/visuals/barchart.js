@@ -1,3 +1,14 @@
+const endpointTwo =
+	'https://gist.githubusercontent.com/ralfz123/0a48d1cd9b3155c7442fe98332a9031e/raw/b8ccaf6949381f89aa90a4eb26018c912e509a5b/accidents_data-3.geojson';
+
+let data = []; // global data variable
+
+fetch(endpointTwo)
+	.then((response) => response.json())
+	.then((cycleAccidentsData) => data.push(cycleAccidentsData));
+
+console.log(data);
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
 	type: 'bar',
@@ -8,14 +19,14 @@ var myBarChart = new Chart(ctx, {
 				label: 'Man',
 				backgroundColor: '#3580cf',
 				fontColor: '#f2f2f2',
-				data: [3, 7, 4, 6],
+				data: [1, 2, 3, 4],
 				borderWidth: 1,
 			},
 			{
 				label: 'Vrouw',
 				backgroundColor: '#52556a',
 				fontColor: '#f2f2f2',
-				data: [4, 3, 5, 8],
+				data: [3, 4, 6, 8],
 				borderWidth: 1,
 			},
 		],

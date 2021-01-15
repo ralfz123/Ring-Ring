@@ -6,7 +6,6 @@
 // import * as overlay from 'script/elements/overlay';
 // import * as handleTabs from 'script/functionalities/handleTabs';
 
-
 // ------------------ RingRing data fetch -------------------------------------
 
 // Endpoint Ring-Ring data (cycle routes)
@@ -17,7 +16,6 @@ const endpointOne =
 // fetch(endpointOne)
 // 	.then((response) => response.json())
 // 	.then((dataRingRing) => console.log('dataRingRing=', dataRingRing));
-
 
 // async function setupMapData() {
 //   let rawData = await getData();
@@ -30,10 +28,6 @@ const endpointOne =
 //   const json = await response.json();
 //   return await json;
 // }
-
-
-
-
 
 // ------------------ Cycle Accidents data fetch -------------------------------------
 
@@ -54,6 +48,3 @@ const endpointOne =
 // Data succesvol ophalen
 // Multiple api data
 // 2. loading scherm - filmpje laten zien
-
-
-

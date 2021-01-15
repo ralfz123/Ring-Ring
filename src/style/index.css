@@ -259,6 +259,7 @@ header #info-button {
 	height: 32px;
 	align-self: center;
 	justify-self: center;
+	margin: 10px;
 }
 
 #filter-pattern button:hover {
@@ -283,7 +284,7 @@ header #info-button {
 	text-align: center;
 }
 #chart-part-wrapper h2 {
-	font-size: 1em;
+	font-size: 1em; padding: 12px;
 }
 
 #chart-part-wrapper #chart-wrapper canvas {
@@ -431,7 +432,7 @@ header #info-button {
 	grid-area: tooltip-header;
 	padding: 0.7em;
 
-	border-left: 5px solid var(--additional2);
+	/* border-left: 5px solid var(--additional2); */
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
@@ -498,21 +499,21 @@ header #info-button {
 .tooltip-button {
 	/* grid-area: button; */
 	background: var(--primary);
-    border: none;
-    border-radius: 5px;
-    color: #ffffffbf;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1em;
-    cursor: pointer;
-    width: 150px;
-    /* height: 28px; */
-    /* align-self: center; */
-    /* justify-self: center; */
-    margin-top: 20px;
-    padding: 5px;
+	border: none;
+	border-radius: 5px;
+	color: #ffffffbf;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1em;
+	cursor: pointer;
+	width: 150px;
+	/* height: 28px; */
+	/* align-self: center; */
+	/* justify-self: center; */
+	margin-top: 20px;
+	padding: 5px;
 }
 
 .tooltip-button:hover {
