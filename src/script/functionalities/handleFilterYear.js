@@ -14,4 +14,4 @@ function updateLegend() {
 	document.getElementById('map-legend-year').innerHTML = c;
 }
 
-updateLegend() // Must be '2020' | default checked in HTML
+// updateLegend() // Must be '2020' | default checked in HTML

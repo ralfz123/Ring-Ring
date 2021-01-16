@@ -1,13 +1,13 @@
-const endpointTwo =
-	'https://gist.githubusercontent.com/ralfz123/0a48d1cd9b3155c7442fe98332a9031e/raw/b8ccaf6949381f89aa90a4eb26018c912e509a5b/accidents_data-3.geojson';
+// const endpointTwo =
+// 	'https://gist.githubusercontent.com/ralfz123/0a48d1cd9b3155c7442fe98332a9031e/raw/b8ccaf6949381f89aa90a4eb26018c912e509a5b/accidents_data-3.geojson';
 
-let data = []; // global data variable
+// let data = []; // global data variable
 
-fetch(endpointTwo)
-	.then((response) => response.json())
-	.then((cycleAccidentsData) => data.push(cycleAccidentsData));
+// fetch(endpointTwo)
+// 	.then((response) => response.json())
+// 	.then((cycleAccidentsData) => data.push(cycleAccidentsData));
 
-console.log(data);
+// console.log(data);
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var myBarChart = new Chart(ctx, {

@@ -32,19 +32,18 @@ const endpointOne =
 // ------------------ Cycle Accidents data fetch -------------------------------------
 
 // Endpoint Cycle accidents data (gist)
-// const endpointTwo =
-// 	'https://gist.githubusercontent.com/ralfz123/d5946b682461a96c7e430f303610320f/raw/5865ec4d03495edcd9537cac8aba557a099ea556/accidents_data.json';
+const accidentsData =
+	'https://gist.githubusercontent.com/ralfz123/d5946b682461a96c7e430f303610320f/raw/5865ec4d03495edcd9537cac8aba557a099ea556/accidents_data.json';
 
-// fetch(endpointTwo)
-// 	.then((response) => response.json())
-// 	.then((cycleAccidentsData) =>
-// 		console.log('cycleAccidentsData=', cycleAccidentsData)
-// 	);
-//
-//let data = cycleAccidentsData;
+let data = [];
+console.log('data=', data);
+
+fetch(accidentsData)
+	.then((response) => response.json())
+	.then((cycleAccidentsData) => data.push(cycleAccidentsData));
+
 // export { data };
 
 // 1. Jordy zijn fetch methode zien
-// Data succesvol ophalen
-// Multiple api data
-// 2. loading scherm - filmpje laten zien
+// Data succesvol ophalen en opslaan in globale data variabele
+// 2. loading scherm - in de app verwerken (auto scroll)
