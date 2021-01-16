@@ -276,6 +276,32 @@ input:checked + .slider:before {
 	grid-area: part2;
 } */
 
+#filter-pattern-dataset-toggle-button a {
+	font-size: 13px;
+	display: block;
+	margin: 5px 0px;
+	padding: 0;
+	padding: 8px;
+	width: 70px;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	text-align: left;
+	border-radius: 5px;
+}
+#filter-pattern-dataset-toggle-button a:last-child {
+	border: none;
+}
+
+#filter-pattern-dataset-toggle-button a.absent {
+	background-color: var(--secondary);
+	color: var(--primary);
+}
+
+#filter-pattern-dataset-toggle-button a.active {
+	background-color: var(--primary);
+	color: var(--mainText);
+}
+
 #filter-pattern h2 {
 	font-size: 1em;
 	padding-bottom: 0;

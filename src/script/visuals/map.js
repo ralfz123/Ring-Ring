@@ -25,11 +25,11 @@ map.on('load', function () {
 	});
 
 	map.addLayer({
-		id: 'route',
+		id: 'Fietsdrukte',
 		type: 'line',
 		source: 'routes',
 		layout: {
-			'visibility': 'visible',
+			visibility: 'none',
 			'line-join': 'round',
 			'line-cap': 'round',
 		},
@@ -41,9 +41,12 @@ map.on('load', function () {
 	});
 
 	map.addLayer({
-		id: 'accidents-viz',
+		id: 'Fietsongelukken',
 		type: 'circle',
 		source: 'outcome',
+		layout: {
+			visibility: 'visible',
+		},
 		paint: {
 			'circle-stroke-color': [
 				'match',
@@ -81,7 +84,7 @@ map.on('load', function () {
 	// source code below (mapbox docs) - https://docs.mapbox.com/help/tutorials/create-interactive-hover-effects-with-mapbox-gl-js/#define-the-hover-attribute
 	// var quakeID = null;
 
-	map.on('click', 'accidents-viz', (e) => {
+	map.on('click', 'Fietsongelukken', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		document.getElementById('tooltip').style.display = 'block';
 
@@ -129,79 +132,54 @@ map.on('load', function () {
 			} else if (accidentOutcome == 'gewond') {
 				tooltipHeader.style.borderLeft = '5px solid #e35e0d';
 			}
-
-			// If quakeID for the hovered feature is not null,
-			// use removeFeatureState to reset to the default behavior
-			// if (quakeID) {
-			// 	map.removeFeatureState({
-			// 		source: 'earthquakes',
-			// 		id: quakeID,
-			// 	});
-			// }
-
-			// quakeID = e.features[0].id;
-
-			// When the mouse moves over the earthquakes-viz layer, update the
-			// feature state for the feature under the mouse
-			// map.setFeatureState(
-			// 	{
-			// 		source: 'earthquakes',
-			// 		id: quakeID,
-			// 	},
-			// 	{
-			// 		hover: true,
-			// 	}
-			// );
 		}
 	});
 
 	// Change the cursor to a pointer when the mouse is over the places layer.
-	map.on('mouseenter', 'accidents-viz', function () {
+	map.on('mouseenter', 'Fietsongelukken', function () {
 		map.getCanvas().style.cursor = 'pointer';
 	});
 
 	// Change it back to a pointer when it leaves.
-	map.on('mouseleave', 'accidents-viz', function () {
+	map.on('mouseleave', 'Fietsongelukken', function () {
 		map.getCanvas().style.cursor = 'grab';
 	});
 
 	// Hide and show data layer
 	// https://docs.mapbox.com/mapbox-gl-js/example/toggle-layers/
-	// map.on('click', 'routes', (e) => {
-	// 	document.getElementById('filter-pattern-dataset-toggle-button');
-	// 	map.getCanvas().style.display = 'none';
-	// });
 
 	// enumerate ids of the layers
-	var toggleableLayerIds = ['route'];
+	var toggleableLayerIds = ['Fietsdrukte']; // , 'Fietsongelukken'
 
 	// set up the corresponding toggle button for each layer
-	for (var i = 0; i < toggleableLayerIds.length; i++) {
-		var id = toggleableLayerIds[i];
+	// for (var i = 0; i < toggleableLayerIds.length; i++) {
+	var id = toggleableLayerIds;
 
-		var link = document.createElement('a');
-		link.href = '#';
-		link.className = 'active';
-		link.textContent = id;
+	var link = document.createElement('a');
+	link.href = '#';
+	link.className = 'absent';
+	link.textContent = id;
 
-		link.onclick = function (e) {
-			var clickedLayer = this.textContent;
-			e.preventDefault();
-			e.stopPropagation();
+	link.onclick = function (e) {
+		var clickedLayer = this.textContent;
+		e.preventDefault();
+		e.stopPropagation();
 
-			var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+		var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
 
-			// toggle layer visibility by changing the layout object's visibility property
-			if (visibility === 'visible') {
-				map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-				this.className = '';
-			} else {
-				this.className = 'active';
-				map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-			}
-		};
+		// toggle layer visibility by changing the layout object's visibility property
+		if (visibility === 'visible') {
+			map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+			this.className = 'absent';
+		} else if (visibility === 'none') {
+			map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+			this.className = 'active';
+		}
+	};
 
-		var layers = document.getElementById('menu');
-		layers.appendChild(link);
-	}
+	var layers = document.getElementById(
+		'filter-pattern-dataset-toggle-button'
+	);
+	layers.appendChild(link);
+	// }
 });
