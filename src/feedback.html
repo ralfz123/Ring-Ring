@@ -15,12 +15,6 @@
 	<body>
 		<!-- header -->
 		<header>
-			<!-- <img
-				id="logo"
-				src="assets/ringring-logo.svg"
-				alt="Ring-Ring-logo"
-			/> -->
-
 			<h1 id="logo">
 				RING<span style="color: var(--primary)">-</span
 				><span style="color: var(--secondary)">RING</span>
@@ -34,146 +28,165 @@
 					</li>
 				</ul>
 			</nav>
-
-			<!-- <img id="info-button" src="assets/icons/help-icon.svg" alt="" /> -->
 		</header>
 
 		<div id="feedbackpage">
 			<main id="feedback-container">
 				<div id="feedback-filter">
-					<section id="feedback-filter-sort">
-						<form action="/">
-							<label for="feedback-filter-categories"
-								>Sorteer🔻</label
-							>
-							<select name="feedback-filter-categories" id="">
-								<option value="volvo">
-									Van hoog naar laag
+					<section id="feedback-filter-color">
+						<div class="custom-select">
+							<select>
+								<option value="default">
+									Feedback ranking
 								</option>
-								<option value="saab">Van laag naar hoog</option>
+								<option value="negative" id="negative">
+									Negatief
+								</option>
+								<option value="neutral" id="neutral">
+									Neutraal
+								</option>
+								<option value="positive" id="positive">
+									Positief
+								</option>
 							</select>
-						</form>
+						</div>
 					</section>
 
-					<section id="feedback-filter-color">
-						<h3>Review ranking</h3>
-						<button id="button-red"></button>
-						<button id="button-orange"></button>
-						<button id="button-green"></button>
+					<section id="feedback-filter-sort">
+						<div class="custom-select">
+							<select>
+								<option value="default">Sorteer</option>
+								<option value="negative">Relevantie</option>
+								<option value="most-recent">
+									Meest recent
+								</option>
+							</select>
+						</div>
 					</section>
 
 					<section id="feedback-filter-category">
-						<form action="/">
-							<label for="feedback-filter-categories"
-								>Trefwoord</label
-							>
-							<select name="feedback-filter-categories" id="">
-								<option value="volvo">"Ongeluk"</option>
-								<option value="saab">"Fiets"</option>
-								<option value="opel">"Regenachtig"</option>
+						<div class="custom-select">
+							<select>
+								<option value="default">Trefwoord</option>
+								<option value="ongeluk">Ongeluk</option>
+								<option value="bottenbreuk">Bottenbreuk</option>
+								<option value="gevallen">Gevallen</option>
+								<option value="gevallen">Zonnig</option>
+
 							</select>
-						</form>
+						</div>
 					</section>
 				</div>
 
 				<div id="feedback-list">
 					<ul>
 						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+							<p id="feedback-id">#ID123</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								Ik fietste vandaag langs de Marnixstraat en ik
+								heb een ongeluk zien gebeuren op de weg waarbij
+								de auto tegen de fietser aankwam. Helaas heeft
+								de auto de fietser niet gezien en is de persoon
+								met een armbreuk naar het ziekenhuis gebracht.
 							</p>
-							<div id="feedback-color"></div>
+
 							<p id="feedback-category">Ongeluk</p>
 						</li>
 
 						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+							<p id="feedback-id">#ID123</p>
+							<p id="feedback-desc">
+								Door gladheid en sneeuwval op de weg ben ik
+								uitgegleden toen ik onderweg was naar mijn werk.
+								Waardoor ik direct naar de eerstehulppost ben
+								gereden met een gebroken pols.
+							</p>
+
+							<p id="feedback-category">Gevallen</p>
+						</li>
+
+						<li id="feedback-list-item">
+							<p id="feedback-id">#ID123</p>
+							<p id="feedback-desc">
+								Wat Wat een ruk weer en me band ook nog lek.
+								Helemaal
+								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-een
+								ruk weer en me band ook nog lek. Helemaal
+								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+							</p>
+
+							<p id="feedback-category">Bottenbreuk</p>
+						</li>
+
+						<li id="feedback-list-item">
+							<p id="feedback-id">#ID123</p>
+							<p id="feedback-desc">
+								Wat een ruk weer en me band ook nog lek.
+								Helemaal
+								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-Wat
+								een ruk weer en me band ook nog lek. Helemaal
+								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-Wat
+								een ruk weer en me band ook nog lek. Helemaal
+								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-Wat
+								een ruk weer en me band ook nog lek. Helemaal
+								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+							</p>
+
+							<p id="feedback-category">Gevaarlijk</p>
+						</li>
+
+						<li id="feedback-list-item">
+							<p id="feedback-id">#ID123</p>
 							<p id="feedback-desc">
 								Wat een ruk weer en me band ook nog lek.
 								Helemaal
 								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
 							</p>
-							<div id="feedback-color"></div>
+
+							<p id="feedback-category">Handtas</p>
+						</li>
+
+						<li id="feedback-list-item">
+							<p id="feedback-id">#ID123</p>
+							<p id="feedback-desc">
+								Wat een ruk weer en me band ook nog lek.
+								Helemaal
+								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+							</p>
+
 							<p id="feedback-category">Ongeluk</p>
 						</li>
 
 						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+							<p id="feedback-id">#ID123</p>
 							<p id="feedback-desc">
 								Wat een ruk weer en me band ook nog lek.
 								Helemaal
 								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<p id="feedback-category">Kruispunt</p>
 						</li>
 
 						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+							<p id="feedback-id">#ID123</p>
 							<p id="feedback-desc">
 								Wat een ruk weer en me band ook nog lek.
 								Helemaal
 								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<p id="feedback-category">Gevaarlijk</p>
 						</li>
 
 						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+							<p id="feedback-id">#ID123</p>
 							<p id="feedback-desc">
 								Wat een ruk weer en me band ook nog lek.
 								Helemaal
 								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
-						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
-							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
-							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
-						</li>
-
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
-							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
-							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
-						</li>
-
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
-							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
-							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
-						</li>
-
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
-							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
-							</p>
-							<div id="feedback-color"></div>
 							<p id="feedback-category">Ongeluk</p>
 						</li>
 					</ul>
@@ -181,5 +194,6 @@
 			</main>
 		</div>
 		<!-- <footer>footer</footer> -->
+		<script src="script/functionalities/handleDropdown.js"></script>
 	</body>
 </html>

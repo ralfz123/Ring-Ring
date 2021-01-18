@@ -9,8 +9,8 @@
 // ------------------ RingRing data fetch -------------------------------------
 
 // Endpoint Ring-Ring data (cycle routes)
-const endpointOne =
-	'https://cors-anywhere.herokuapp.com/http://ringring.jorrr.nl/geojson-data-ringring.json'; //
+// const endpointOne =
+// 	'https://cors-anywhere.herokuapp.com/http://ringring.jorrr.nl/geojson-data-ringring.json'; //
 
 // Fetching data - API/gist
 // fetch(endpointOne)
@@ -33,14 +33,46 @@ const endpointOne =
 
 // Endpoint Cycle accidents data (gist)
 const accidentsData =
-	'https://gist.githubusercontent.com/ralfz123/d5946b682461a96c7e430f303610320f/raw/5865ec4d03495edcd9537cac8aba557a099ea556/accidents_data.json';
+	'https://gist.githubusercontent.com/ralfz123/0a48d1cd9b3155c7442fe98332a9031e/raw/b8ccaf6949381f89aa90a4eb26018c912e509a5b/accidents_data-3.geojson';
 
-let data = [];
-console.log('data=', data);
+// let data = [];
+// console.log('data=', data);
+// console.table(data);
 
-fetch(accidentsData)
-	.then((response) => response.json())
-	.then((cycleAccidentsData) => data.push(cycleAccidentsData));
+// fetch(accidentsData)
+// 	.then((response) => response.json())
+// 	.then((cycleAccidentsData) => data.push(cycleAccidentsData));
+
+// console.log(Object.values(data[0][1].gender));
+
+// function getKeyByValue(object, value) {
+// 	return Object.keys(object).find((key) => object[key] === value);
+// }
+// const map = { first: '1', second: '2' };
+// console.log(getKeyByValue(map, '2'));
+
+
+// let jsonData = '';
+
+// let apiUrl =
+// 	'https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/GDP-data.json';
+
+// async function getJson(url) {
+// 	let response = await fetch(url);
+// 	let data = await response.json();
+// 	return data;
+// }
+
+// async function main() {
+// 	jsonData = await getJson(accidentsData);
+// 	console.log(jsonData);
+
+// 	function getKeyByValue(object, value) {
+// 		return Object.keys(object).find(key => object[key] === value);
+// 	  }
+// }
+
+// main();
 
 // export { data };
 

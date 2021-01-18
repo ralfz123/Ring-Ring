@@ -334,21 +334,27 @@
 				</div>
 
 				<div id="tooltip">
+					<p class="disappear-button">X</p>
+
 					<div id="tooltip-header">
 						<h2>Fietsongeluk</h2>
-						<p id="tooltip-data-accident"></p>
+						<p id="tooltip-data-accident">[Afloop]</p>
 					</div>
 
 					<div id="tooltip-data">
 						<ul>
 							<li>
 								<img src="assets/icons/location.svg" alt="" />
-								<p id="tooltip-data-streetname"></p>
+								<p id="tooltip-data-streetname">[Straatnaam]</p>
 							</li>
 
 							<li>
 								<img src="assets/icons/calendar.svg" alt="" />
-								<p><span id="tooltip-data-age"></span></p>
+								<p>
+									<span id="tooltip-data-age"
+										>[Leeftijd slachtoffer]</span
+									>
+								</p>
 							</li>
 
 							<li>
@@ -373,14 +379,16 @@
 							alt="Afbeelding nieuwsartikel"
 						/>
 						<p>Nieuwsartikel, gepubliceerd op</p>
-						<p id="tooltip-data-date-publicated">01-01-2020</p>
+						<p id="tooltip-data-date-publicated">
+							[Datum publicatie]
+						</p>
 						<p id="tooltip-data-source" style="font-style: italic">
-							AT5.nl
+							[Website van bron]
 						</p>
 						<a
 							id="tooltip-data-url"
 							class="tooltip-button"
-							href="https://google.com"
+							href="/"
 							target="_blank"
 						>
 							Lees meer
@@ -404,12 +412,11 @@
 
 		<!-- Script routes -->
 		<script src="index.js"></script>
-		<!-- <script src="script/elements/tooltip.js"></script> -->
+		<script src="script/functionalities/handleTooltip.js"></script>
 		<script src="script/visuals/map.js"></script>
 		<script src="script/functionalities/resetButtons.js"></script>
 		<script src="script/visuals/barchart.js"></script>
 		<script src="script/elements/overlay.js"></script>
 		<script src="script/functionalities/handleFilterYear.js"></script>
-		<!-- <script src="script/functionalities/handleTooltip.js"></script> -->
 	</body>
 </html>

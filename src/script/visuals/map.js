@@ -86,7 +86,7 @@ map.on('load', function () {
 
 	map.on('click', 'Fietsongelukken', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
-		document.getElementById('tooltip').style.display = 'block';
+		document.getElementById('tooltip').style.visibility = 'visible';
 
 		// Set variables equal to the current feature's magnitude, location, and time
 		var accidentOutcome = e.features[0].properties.outcome;
