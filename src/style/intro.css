@@ -32,6 +32,42 @@ button {
 }
 
 /* ******************************************************************************************************* */
+/* Play Button */
+
+#play-container {
+	position: relative;
+	background: #2a2c3c;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	text-align: center;
+}
+
+#play-button {
+	position: absolute;
+	z-index: 2;
+	/* margin: 0; */
+	width: 150px;
+	height: 80px;
+	/* padding: 6px; */
+	background: var(--primary);
+	border: none;
+	border-radius: 5px;
+	color: #ffffffbf;
+	/* text-align: center; */
+	text-decoration: none;
+	font-size: 3em;
+	cursor: pointer;
+	font-weight: 600;
+	top: 45%;
+	left: 45%;
+}
+
+#play-container #play-button:hover {
+	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
+	color: #ffffff;
+}
+
 /* VIDEO */
 
 #video {
