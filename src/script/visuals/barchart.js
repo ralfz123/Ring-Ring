@@ -22,25 +22,24 @@ function init(data) {
 	let dataArray = data.features;
 	dataArray.forEach(function (item) {
 		let age = item.properties.age;
-		// console.log(age);
 
 		// Set value to correct category
-		if (age > 0 && age <= 18) {
-			// add to category 0-18
-			console.log('0-18');
-		} else if (age > 18 && age <= 30) {
-			// add to category 18-30
-			console.log('18-30');
-		} else if (age > 30 && age <= 65) {
-			// add to category 30-65
-			console.log('30-65');
-		} else if (age > 65) {
-			// add to category 65+
-			console.log('65+');
-		} else {
-			// null;
-			console.log('Leeftijd onbekend');
-		}
+		// if (age > 0 && age <= 18) {
+		// 	// add to category 0-18
+		// 	console.log('0-18');
+		// } else if (age > 18 && age <= 30) {
+		// 	// add to category 18-30
+		// 	console.log('18-30');
+		// } else if (age > 30 && age <= 65) {
+		// 	// add to category 30-65
+		// 	console.log('30-65');
+		// } else if (age > 65) {
+		// 	// add to category 65+
+		// 	console.log('65+');
+		// } else {
+		// 	// null;
+		// 	console.log('Leeftijd onbekend');
+		// }
 	});
 }
 

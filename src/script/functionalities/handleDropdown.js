@@ -47,7 +47,7 @@ for (i = 0; i < l; i++) {
 	}
 	x[i].appendChild(b);
 	a.addEventListener('click', function (e) {
-		console.log('clicked')
+		console.log('clicked');
 
 		/*when the select box is clicked, close any other select boxes,
 				  and open/close the current select box:*/
