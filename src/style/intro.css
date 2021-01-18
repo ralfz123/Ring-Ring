@@ -75,6 +75,7 @@ button {
 	height: 100%;
 	outline: none;
 	position: relative;
+	cursor: none;
 }
 
 /* ***************************************************** */
