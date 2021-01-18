@@ -91,9 +91,6 @@ button {
 	/* background: rgba(26, 28, 38, 0.85); */
 	background: var(--mainBackground);
 	color: var(--mainText);
-	/* -webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 0px 38px -16px rgba(0, 0, 0, 0.75); */
 	opacity: 1;
 
 	display: grid;

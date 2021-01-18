@@ -9,3 +9,10 @@ function handleVideoButton() {
 	playButton.style.display = 'none';
 	playButtonContainer.style.display = 'none';
 }
+
+video.onended = function () {
+	let instructionsOverlay = document.getElementById('instructions');
+
+	instructionsOverlay.style.visibility = 'visible';
+	instructionsOverlay.style.animation = 'fadeIn ease 4s';
+};
