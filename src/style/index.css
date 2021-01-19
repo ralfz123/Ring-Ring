@@ -136,7 +136,7 @@ header #info-button {
 	cursor: help;
 	/* filter: invert(27%) sepia(51%) saturate(78%) hue-rotate(346deg)
 		brightness(104%) contrast(97%) grayscale(1%); */
-	border: 2px solid var(--primary);
+	border: 3px solid var(--primary);
 	border-radius: 50px;
 	text-align: center;
 	font-size: 1.5em;
@@ -713,24 +713,44 @@ header #info-button {
 	position: relative;
 	display: grid;
 	grid-template-areas: 'color	empty sort	category';
-	grid-template-columns: 1fr 3fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr 1fr;
 	grid-template-rows: 100px;
 	background-color: var(--layoutBlock);
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	align-items: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 1rem;
 }
 
 #feedback-filter-color {
 	grid-area: color;
-}
-
-.custom-select {
-	position: relative;
-	/* width: 250px; */
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+}
+
+#feedback-filter-sort {
+	grid-area: sort;
+	text-align: center;
+	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+}
+
+#feedback-filter-category {
+	grid-area: category;
+	text-align: center;
+	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+}
+
+/* Dropdown menu */
+.custom-select {
+	position: relative;
 }
 
 .custom-select select {
@@ -738,14 +758,14 @@ header #info-button {
 }
 
 .select-selected {
-	background-color: var(--layoutBlock);
-	font-size: 1.3rem;
+	/* background-color: var(--layoutBlock); */
+	/* font-size: 1.3rem; */
 }
 
 .select-selected:after {
 	position: absolute;
 	content: '';
-	top: 14px;
+	top: 42px;
 	right: 10px;
 	width: 0;
 	height: 0;
@@ -755,17 +775,36 @@ header #info-button {
 
 .select-selected.select-arrow-active:after {
 	border-color: transparent transparent #fff transparent;
-	top: 7px;
+	top: 35px;
 }
 
 .select-items div,
 .select-selected {
 	color: #ffffff;
-	padding: 8px 16px;
+	padding: 36px 16px;
 	border: 1px solid transparent;
 	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
 	cursor: pointer;
 	user-select: none;
+}
+
+.select-items div {
+	padding: 8px 16px;
+}
+
+#feedback-filter-color .select-items div:nth-child(1) {
+	border-left: 3px solid var(--additional2);
+	color: var(--additional2);
+}
+
+#feedback-filter-color .select-items div:nth-child(2) {
+	border-left: 3px solid var(--additional1);
+	color: var(--additional1);
+}
+
+#feedback-filter-color .select-items div:nth-child(3) {
+	border-left: 3px solid #74a571;
+	color: #74a571;
 }
 
 .select-items {
@@ -784,22 +823,6 @@ header #info-button {
 .select-items div:hover,
 .same-as-selected {
 	background-color: rgba(0, 0, 0, 0.1);
-}
-
-#feedback-filter-sort {
-	grid-area: sort;
-	/* background-color: red; */
-	padding: 0.5em;
-	/* justify-self: center; */
-	/* align-self: center; */
-	/* width: 20%; */
-}
-
-#feedback-filter-category {
-	grid-area: category;
-	/* background-color: blue; */
-	padding: 0.5em;
-	/* width: 50%;  */
 }
 
 #feedback-list {
@@ -845,7 +868,7 @@ header #info-button {
 #feedback-list-item {
 	background-color: var(--layoutBlock);
 	margin-bottom: 15px;
-	padding: 5px;
+	/* padding: 5px; */
 	padding-left: 20px;
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.29);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.29);
@@ -879,20 +902,21 @@ header #info-button {
 #feedback-desc {
 	grid-area: id-desc;
 	margin-top: 40px;
-
-	/* padding: 25px; */
+	margin-bottom: 15px;
+	padding-right: 37px;
 }
 
 #feedback-category {
 	grid-area: keyword;
-	padding: 0;
-	margin: 0;
 	text-align: center;
-	justify-self: center;
-	align-self: center;
 	color: var(--primary);
 	font-weight: 600;
+	background-color: var(--layoutBlock);
 	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
+}
+
+#feedback-category p {
+	margin: 50px;
 }
