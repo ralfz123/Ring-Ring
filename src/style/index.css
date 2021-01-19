@@ -390,10 +390,11 @@ header #info-button {
 	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.75);
 	width: 124px;
+	padding-left: 8px;
 }
 #map-legend-colors p {
 	display: inline-block;
-	margin: 6px 0px 4px 6px;
+	margin: 3px 0px 3px 6px;
 	padding: 4px;
 }
 
