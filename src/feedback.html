@@ -15,12 +15,6 @@
 	<body>
 		<!-- header -->
 		<header>
-			<!-- <img
-				id="logo"
-				src="assets/ringring-logo.svg"
-				alt="Ring-Ring-logo"
-			/> -->
-
 			<h1 id="logo">
 				RING<span style="color: var(--primary)">-</span
 				><span style="color: var(--secondary)">RING</span>
@@ -28,158 +22,261 @@
 
 			<nav>
 				<ul>
-					<li><a href="index.html">Dashboard</a></li>
+					<li><a href="dashboard.html">Dashboard</a></li>
 					<li class="nav-selected">
 						<a href="feedback.html">Feedback</a>
 					</li>
 				</ul>
 			</nav>
-
-			<!-- <img id="info-button" src="assets/icons/help-icon.svg" alt="" /> -->
 		</header>
 
+		<!-- main -->
 		<div id="feedbackpage">
 			<main id="feedback-container">
 				<div id="feedback-filter">
-					<section id="feedback-filter-sort">
-						<form action="/">
-							<label for="feedback-filter-categories"
-								>Sorteer🔻</label
-							>
-							<select name="feedback-filter-categories" id="">
-								<option value="volvo">
-									Van hoog naar laag
+					<section id="feedback-filter-color">
+						<div class="custom-select">
+							<select>
+								<option value="default">
+									Feedback ranking
 								</option>
-								<option value="saab">Van laag naar hoog</option>
+								<option value="negative" id="negative">
+									Negatief
+								</option>
+								<option value="neutral" id="neutral">
+									Neutraal
+								</option>
+								<option value="positive" id="positive">
+									Positief
+								</option>
 							</select>
-						</form>
+						</div>
 					</section>
 
-					<section id="feedback-filter-color">
-						<h3>Review ranking</h3>
-						<button id="button-red"></button>
-						<button id="button-orange"></button>
-						<button id="button-green"></button>
+					<section id="feedback-filter-sort">
+						<div class="custom-select">
+							<select>
+								<option value="default">Sorteer</option>
+								<option value="negative">Relevantie</option>
+								<option value="most-recent">
+									Meest recent
+								</option>
+							</select>
+						</div>
 					</section>
 
 					<section id="feedback-filter-category">
-						<form action="/">
-							<label for="feedback-filter-categories"
-								>Trefwoord</label
-							>
-							<select name="feedback-filter-categories" id="">
-								<option value="volvo">"Ongeluk"</option>
-								<option value="saab">"Fiets"</option>
-								<option value="opel">"Regenachtig"</option>
+						<div class="custom-select">
+							<select>
+								<option value="default">Trefwoord</option>
+								<option value="ongeluk">Ongeluk</option>
+								<option value="bottenbreuk">Gladheid</option>
+								<option value="gevallen">Zonnige</option>
+								<option value="gevallen">Gevaarlijk</option>
+								<option value="gevallen">Ambulance</option>
+								<option value="gevallen">Druk</option>
 							</select>
-						</form>
+						</div>
 					</section>
 				</div>
 
 				<div id="feedback-list">
 					<ul>
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="negative">
+							<p id="feedback-id">#ID253</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								Ik fietste vandaag langs de Marnixstraat en ik
+								heb een ongeluk zien gebeuren op de weg waarbij
+								de auto tegen de fietser knalde. Helaas heeft de
+								auto de fietser niet gezien en is de fietser met
+								een armbreuk naar het ziekenhuis gebracht.
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Ongeluk</p></div>
 						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="neutral">
+							<p id="feedback-id">#ID342</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								Door gladheid en sneeuwval op de weg ben ik
+								uitgegleden onderweg naar mijn werk. Waardoor ik
+								direct naar de eerstehulppost ben gereden met
+								een gebroken pols.
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Gladheid</p></div>
 						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="positive">
+							<p id="feedback-id">#ID123</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								De route onderweg naar mijn oma verliep
+								vlekkeloos, ik heb erg genoten van het zonnige
+								weer! Tijdens deze rit ben ik ook langs een
+								bloemenveld gereden waar er verschillende
+								soorten bloemen bloeide. Stiekem heb ik langs de
+								weg een bloemetje voor mijn oma geplukt.
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Zonnige</p></div>
 						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="negative">
+							<p id="feedback-id">#ID233</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								Op het fietspad langs het ING-kantoor op de
+								Apollolaan lag een tegel los. Hierdoor ben ik
+								gevallen en heeft mijn fiets flinke schade
+								opgelopen… Mijn ketting lag eraf en m’n stuur is
+								gebogen. Dit moest ik ter plekke maken waardoor
+								ik ook nog is te laat was op werk. Hier zou de
+								gemeente echt wat aan moeten doen! Gelukkig
+								fietste ik niet met mijn kind achterop…
+								Levensgevaarlijke route!
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Gevaarlijk</p></div>
 						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="positive">
+							<p id="feedback-id">#ID463</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								Botsing op het fietspad in de West-Indische
+								Buurt. Een automobilist knalde met behoorlijke
+								snelheid tegen een fietser. Gelukkig was de
+								ambulance er snel bij, en lag het slachtoffer
+								niet in kritieke toestand. Het liep gelukkig
+								allemaal goed af! Voor de rest heb ik erg
+								genoten van de fietsroute en heb ik een stukje
+								van Amsterdam ontdekt die ik nog niet eerder
+								kende!
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Ambulance</p></div>
 						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="neutral">
+							<p id="feedback-id">#ID126</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								Mooie fietsroute langs de grachten van
+								Amsterdam. Zeker een aanrader!. Helaas was het
+								enorm druk waardoor ik niet lekker op snelheid
+								kwam. Gelukkig moest ik niet ergens op tijd zijn
+								anders was ik zeker te laat gekomen. De
+								fietspaden zijn ook nog eens erg smal waardoor
+								inhalen gevaarlijk werd. Maar aan de andere
+								kant, staat Amsterdam volgens mij bekend om de
+								drukte
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Druk</p></div>
 						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="negative">
+							<p id="feedback-id">#ID346</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								Ik fietste vandaag langs de Marnixstraat en ik
+								heb een ongeluk zien gebeuren op de weg waarbij
+								de auto tegen de fietser knalde. Helaas heeft de
+								auto de fietser niet gezien en is de fietser met
+								een armbreuk naar het ziekenhuis gebracht.
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Ongeluk</p></div>
 						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="positive">
+							<p id="feedback-id">#ID137</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								De route onderweg naar mijn oma verliep
+								vlekkeloos, ik heb erg genoten van het zonnige
+								weer! Tijdens deze rit ben ik ook langs een
+								bloemenveld gereden waar er verschillende
+								soorten bloemen bloeide. Stiekem heb ik langs de
+								weg een bloemetje voor mijn oma geplukt.
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Zonnige</p></div>
 						</li>
 
-						<li id="feedback-list-item">
-							<h4 id="feedback-id">#ID123</h4>
+						<li id="feedback-list-item" class="neutral">
+							<p id="feedback-id">#ID789</p>
 							<p id="feedback-desc">
-								Wat een ruk weer en me band ook nog lek.
-								Helemaal
-								shit.OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-OmschrijvingFeedback-
+								Door gladheid en sneeuwval op de weg ben ik
+								uitgegleden onderweg naar mijn werk. Waardoor ik
+								direct naar de eerstehulppost ben gereden met
+								een gebroken pols.
 							</p>
-							<div id="feedback-color"></div>
-							<p id="feedback-category">Ongeluk</p>
+
+							<div id="feedback-category"><p>Gladheid</p></div>
+						</li>
+
+						<li id="feedback-list-item" class="negative">
+							<p id="feedback-id">#ID852</p>
+							<p id="feedback-desc">
+								Op het fietspad langs het ING-kantoor op de
+								Apollolaan lag een tegel los. Hierdoor ben ik
+								gevallen en heeft mijn fiets flinke schade
+								opgelopen… Mijn ketting lag eraf en m’n stuur is
+								gebogen. Dit moest ik ter plekke maken waardoor
+								ik ook nog is te laat was op werk. Hier zou de
+								gemeente echt wat aan moeten doen! Gelukkig
+								fietste ik niet met mijn kind achterop…
+								Levensgevaarlijke route!
+							</p>
+
+							<div id="feedback-category"><p>Gevaarlijk</p></div>
+						</li>
+
+						<li id="feedback-list-item" class="neutral">
+							<p id="feedback-id">#ID654</p>
+							<p id="feedback-desc">
+								Mooie fietsroute langs de grachten van
+								Amsterdam. Zeker een aanrader!. Helaas was het
+								enorm druk waardoor ik niet lekker op snelheid
+								kwam. Gelukkig moest ik niet ergens op tijd zijn
+								anders was ik zeker te laat gekomen. De
+								fietspaden zijn ook nog eens erg smal waardoor
+								inhalen gevaarlijk werd. Maar aan de andere
+								kant, staat Amsterdam volgens mij bekend om de
+								drukte
+							</p>
+
+							<div id="feedback-category"><p>Druk</p></div>
+						</li>
+
+						<li id="feedback-list-item" class="positive">
+							<p id="feedback-id">#ID759</p>
+							<p id="feedback-desc">
+								Botsing op het fietspad in de West-Indische
+								Buurt. Een automobilist knalde met behoorlijke
+								snelheid tegen een fietser. Gelukkig was de
+								ambulance er snel bij, en lag het slachtoffer
+								niet in kritieke toestand. Het liep gelukkig
+								allemaal goed af! Voor de rest heb ik erg
+								genoten van de fietsroute en heb ik een stukje
+								van Amsterdam ontdekt die ik nog niet eerder
+								kende!
+							</p>
+
+							<div id="feedback-category"><p>Ambulance</p></div>
 						</li>
 					</ul>
 				</div>
 			</main>
+
+			<!-- footer -->
+			<footer>
+				<p>
+					Copyright © 2021 | Ralf Zonneveld - Nassèra Grampon -
+					Lawrence Prins
+				</p>
+				<a href="https://github.com/ralfz123/ring-ring" target="_blank"
+					>GitHub Repository</a
+				>
+			</footer>
 		</div>
-		<!-- <footer>footer</footer> -->
+
+		<script src="script/functionalities/handleDropdown.js"></script>
 	</body>
 </html>
