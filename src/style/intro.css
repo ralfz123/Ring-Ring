@@ -112,6 +112,14 @@ button {
 	grid-area: card1;
 }
 
+#logo span:nth-child(1) {
+	color: var(--primary);
+}
+
+#logo span:nth-child(2) {
+	color: var(--secondary);
+}
+
 #instructions-card2 {
 	grid-area: card2;
 }
