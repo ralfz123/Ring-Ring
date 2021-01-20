@@ -45,6 +45,15 @@ There are 2 pages in the tool; the dashboard and the feedback-page. Each page ha
 
 <img src="src/assets/readme-assets/feedback.png" width="1000px">
 
+## :chart_with_upwards_trend: Libraries
+I used two libraries that helped me a lot to make a nice dashboard;  
+
+**Mapbox GL JS**  
+Mapbox is a JS library that delivers interactive OpenStreetMaps and online Mapbox styles (Studio Mapbox). In the editor of the Studio you can style your own map, so that it fits completely into your design. The way how to implement the Mapbox code and style is very user friendly.
+
+**Chart.js**  
+Chart.js is a JS library that delivers a lot of data visualizations. I chose to make the bar chart with Chart.js and it helped me a lot. You can configure it to the end to how you want it and it also works fine with plugins like chartjs-plugin-datalabels.
+
 
 ## :1234: Data
 
