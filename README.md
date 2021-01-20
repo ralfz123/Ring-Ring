@@ -170,8 +170,6 @@ Credits to [Janine Hogendoorn](https://ring-ring.nu/author/janine/) from Ring-Ri
 - Chart.js. (n.d.). Chart.js documentation - Chart.js. Retrieved 29 December 2020 from https://www.chartjs.org/docs/latest/
 - Chart.js Datalabels plugin. (n.d.). Chart.js Datalabels plugin documentation - Chart.js Datalabels plugin. Retrieved  30 December 2020 from https://chartjs-plugin-datalabels.netlify.app/guide/getting-started.html#installation
 - Chart.js. (n.d.). Chart.js documentation - Chart.js. Retrieved 6 January 2021 from https://www.chartjs.org/docs/latest/developers/plugins.html
-
-
 - Chart.js. (n.d.). Chart.js Getting Started - Chart.js. Retrieved 10 January 2021 from https://www.chartjs.org/docs/latest/getting-started/usage.html
 - Chart.js. (n.d.). Chart.js Accessibility - Chart.js. Retrieved 10 January 2021 from https://www.chartjs.org/docs/latest/general/accessibility.html
 - Chart.js. (n.d.). Chart.js Labelling axes - Chart.js. Retrieved 11 January 2021 from https://www.chartjs.org/docs/latest/axes/labelling.html
