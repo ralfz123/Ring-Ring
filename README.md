@@ -20,13 +20,11 @@ We have created a tool for Amsterdam policymakers in which new insights will eme
 At the begin of the application, there is a short video (7.0s) (see below) that shows a traffic accident (the topic at stake).
 
 <img src="src/assets/readme-assets/intro-page.png" width="1000px">
-The video plays
 
 
-When the video is over, an overlay with an introduction text appears. It explains the entire tool in a nutshell.
+When the video is over, an overlay with an introduction text appears (see below). It explains the entire tool in a nutshell.
 
 <img src="src/assets/readme-assets/intro-page-2.png" width="1000px">
-The introduction overlay
 
 ## :bulb: Features
 There are 2 pages in the tool; the dashboard and the feedback-page. Each page has their own features.
