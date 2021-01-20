@@ -7,38 +7,31 @@ _Project Information Design, a course of Information Design. It is a thema semes
 
 _A tool designed for the policy makers of Amsterdam, commissioned by the company [Ring-Ring ®](https://ring-ring.nu/) in the Netherlands._
 
----
+<img src="src/assets/ringring-logo.svg" alt="Ring Ring logo" width="100px">
 
-## :page_with_curl: Case <img src="src/assets/ringring-logo.svg" width="100px" style="float:right; padding:20px">
-
+## :page_with_curl: Case
 For this course I have to create an interactive data visualization for a company. Ring-Ring is the company I have chosen for, because it's a company that strives for a better cycling environment. I like that endeavor and I agree with it! Ring-Ring has also an application where users cycle routes and the app tracks their cycled routes. Now I have been asked to make a data visualization of the data for one of the target groups (think of policy makers, insurance, stakeholders, app users).
 
----
+
 ## :heart_eyes: Concept
-"For the concept for Ring-Ring I looked at developing a policy-makers dashboard. On the dashboard, policymakers are able to analyze all information about the data in one overview, as well as the feedback from the users."
-
-
-
 We have created a tool for Amsterdam policymakers in which new insights will emerge. In this dashboard, the data of cycling accidents and cycling routes come together, which has never happened before. In this way, efforts to improve cycling safety may well be achieved! This is all showed in one overview, as well as the given feedback from the Ring-Ring app users.
 
 #### Introduction page
 At the begin of the application, there is a short video (7.0s) (see below) that shows a traffic accident (the topic at stake).
-<figure>
-    <img src="src/assets/readme-assets/intro-page.png" width="1000px">
-    <figcaption>The video plays</figcaption>
-</figure>
+
+<img src="src/assets/readme-assets/intro-page.png" width="1000px">
+The video plays
+
 
 When the video is over, an overlay with an introduction text appears. It explains the entire tool in a nutshell.
-<figure>
-    <img src="src/assets/readme-assets/intro-page-2.png" width="1000px">
-    <figcaption>The introduction overlay</figcaption>
-</figure>
 
-### :bulb: Features
+<img src="src/assets/readme-assets/intro-page-2.png" width="1000px">
+The introduction overlay
+
+## :bulb: Features
 There are 2 pages in the tool; the dashboard and the feedback-page. Each page has their own features.
 
 ### Dashboard
-<!-- You can see: -->
 - You can see the cycling accident data plotted on a map (red and orange circles)
 - You can see the cycled routes data of January 2020 in Amsterdam plotted on a map
 - There is a bar chart showing the number of cycling accidents of different age groups and sexes
@@ -54,7 +47,6 @@ There are 2 pages in the tool; the dashboard and the feedback-page. Each page ha
 
 <img src="src/assets/readme-assets/feedback.png" width="1000px">
 
----
 
 ## :1234: Data
 
@@ -128,13 +120,11 @@ There are 2 pages in the tool; the dashboard and the feedback-page. Each page ha
 }
 ```
 
----
 
 ## :red_circle: Live version
 
 [Link to live version, click here!](https://ralfz123.github.io/ring-ring/src/index.html)
 
----
 
 ## :rocket: Install project
 
@@ -162,7 +152,7 @@ python -m SimpleHTTPServer 8000
 localhost:8000
 ```
 
----
+
 
 ## :file_folder: Sources
 Credits to [Janine Hogendoorn](https://ring-ring.nu/author/janine/) from Ring-Ring for giving feedback and thinking along in the process and Credits to Suze for thinking along and motivating the process. Also credits to my teammates Nassèra Grampon and Lawrence Prins (for the design).

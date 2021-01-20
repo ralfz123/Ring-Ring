@@ -38,16 +38,40 @@ button {
 	position: relative;
 	background: #2a2c3c;
 	width: 100vw;
-	height: 100vh;
+	height: 110vh;
 	margin: 0;
-	text-align: center;
+	padding: 0;
+
+	display: grid;
+	grid-template-areas:
+		'logo'
+		'playbutton';
+
+	grid-template-columns: 1fr;
+	grid-template-rows: 40vh 60vh;
+	grid-gap: 20px;
+}
+
+#play-container #logo {
+	grid-area: logo;
+	position: absolute;
+	z-index: 2;
+	justify-self: center;
+	font-size: 4rem;
+	margin: 0;
+	padding: 0;
+	padding-top: 90px;
+	margin-bottom: 30px;
 }
 
 #play-button {
+	grid-area: playbutton;
 	position: absolute;
 	z-index: 2;
+	justify-self: center;
 	width: 150px;
 	height: 80px;
+	margin: 30px;
 	background: var(--primary);
 	border: none;
 	border-radius: 5px;
@@ -56,8 +80,6 @@ button {
 	font-size: 3em;
 	cursor: pointer;
 	font-weight: 600;
-	top: 45%;
-	left: 45%;
 }
 
 #play-container #play-button:hover {

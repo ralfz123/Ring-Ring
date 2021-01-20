@@ -17,8 +17,6 @@ window.onload = async () => {
 };
 
 function init(data) {
-	console.log('data = ', data);
-
 	let dataArray = data.features;
 	dataArray.forEach(function (item) {
 		let age = item.properties.age;
