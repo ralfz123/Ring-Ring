@@ -35,6 +35,7 @@ function init(data) {
 		// console.log(year);
 	});
 
+	// DOES NOT WORK
 	let yearFilter = document.getElementById('filter-pattern-year');
 	yearFilter.data = data;
 	yearFilter.on('change', () => {
@@ -49,12 +50,5 @@ function init(data) {
 		} else if (index1 == 2020) {
 			// select all data entries by 2020 and map and plot (map.js)
 		}
-
-		// if (!index2) {
-		// 	index2 = data[9];
-		// }
-
-		// index ? showDetail(d,index) : console.log('Not a valid index')
-		makeNewData(index1, data);
 	});
 }
