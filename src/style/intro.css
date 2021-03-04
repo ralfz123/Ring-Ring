@@ -3,223 +3,223 @@
 /* ***************************************************** */
 
 :root {
-	--mainText: #f2f2f2;
-	--mainBackground: #2a2c3c;
-	--layoutBlock: #2f3244;
-	--primary: #3580cf;
-	--secondary: #52556a;
-	--additional1: #e35e0d;
-	--additional2: #ce3636;
-	--buttonText: #b6d6f7;
+  --mainText: #f2f2f2;
+  --mainBackground: #2a2c3c;
+  --layoutBlock: #2f3244;
+  --primary: #3580cf;
+  --secondary: #52556a;
+  --additional1: #e35e0d;
+  --additional2: #ce3636;
+  --buttonText: #b6d6f7;
 }
 * {
-	margin: 0;
+  margin: 0;
 }
 /* ***************************************************** */
 /*                         BODY                          */
 /* ***************************************************** */
 body {
-	color: var(--mainText);
-	font-family: 'Quicksand', sans-serif;
-	background: var(--mainBackground);
-	overflow-y: hidden;
+  color: var(--mainText);
+  font-family: 'Quicksand', sans-serif;
+  background: var(--mainBackground);
+  overflow-y: hidden;
 }
 
 body p,
 label,
 button {
-	font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ******************************************************************************************************* */
 /* Play Button */
 
 #play-container {
-	position: relative;
-	background: #2a2c3c;
-	width: 100vw;
-	height: 110vh;
-	margin: 0;
-	padding: 0;
+  position: relative;
+  background: #2a2c3c;
+  width: 100vw;
+  height: 110vh;
+  margin: 0;
+  padding: 0;
 
-	display: grid;
-	grid-template-areas:
-		'logo'
-		'playbutton';
+  display: grid;
+  grid-template-areas:
+    'logo'
+    'playbutton';
 
-	grid-template-columns: 1fr;
-	grid-template-rows: 40vh 60vh;
-	grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40vh 60vh;
+  grid-gap: 20px;
 }
 
 #play-container #logo {
-	grid-area: logo;
-	position: absolute;
-	z-index: 2;
-	justify-self: center;
-	font-size: 4rem;
-	margin: 0;
-	padding: 0;
-	padding-top: 90px;
-	margin-bottom: 30px;
+  grid-area: logo;
+  position: absolute;
+  z-index: 2;
+  justify-self: center;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+  padding-top: 90px;
+  margin-bottom: 30px;
 }
 
 #play-button {
-	grid-area: playbutton;
-	position: absolute;
-	z-index: 2;
-	justify-self: center;
-	width: 150px;
-	height: 80px;
-	margin: 30px;
-	background: var(--primary);
-	border: none;
-	border-radius: 5px;
-	color: #ffffffbf;
-	text-decoration: none;
-	font-size: 3em;
-	cursor: pointer;
-	font-weight: 600;
+  grid-area: playbutton;
+  position: absolute;
+  z-index: 2;
+  justify-self: center;
+  width: 150px;
+  height: 80px;
+  margin: 30px;
+  background: var(--primary);
+  border: none;
+  border-radius: 5px;
+  color: #ffffffbf;
+  text-decoration: none;
+  font-size: 3em;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 #play-container #play-button:hover {
-	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
-	color: #ffffff;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
+  color: #ffffff;
 }
 
 /* VIDEO */
 
 #video {
-	width: 100%;
-	height: 100%;
-	outline: none;
-	position: relative;
-	cursor: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  position: relative;
+  cursor: none;
 }
 
 /* ***************************************************** */
 /*           INSTRUCTIONS                                */
 /* ***************************************************** */
 #instructions {
-	visibility: hidden;
-	position: absolute;
-	z-index: 4;
-	margin: 0 auto;
-	padding: 4em 10em;
-	background: var(--mainBackground);
-	color: var(--mainText);
-	opacity: 1;
+  visibility: hidden;
+  position: absolute;
+  z-index: 4;
+  margin: 0 auto;
+  padding: 4em 10em;
+  background: var(--mainBackground);
+  color: var(--mainText);
+  opacity: 1;
 
-	display: grid;
-	grid-template-areas: 'card1 card2 card3';
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 10fr;
-	grid-gap: 60px;
+  display: grid;
+  grid-template-areas: 'card1 card2 card3';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10fr;
+  grid-gap: 60px;
 }
 @keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #instructions-card1 {
-	grid-area: card1;
+  grid-area: card1;
 }
 
 #logo span:nth-child(1) {
-	color: var(--primary);
+  color: var(--primary);
 }
 
 #logo span:nth-child(2) {
-	color: var(--secondary);
+  color: var(--secondary);
 }
 
 #instructions-card2 {
-	grid-area: card2;
+  grid-area: card2;
 }
 
 #instructions-card3 {
-	grid-area: card3;
+  grid-area: card3;
 }
 
 .instructions-card {
-	background-color: #ffffff;
-	-webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.242);
-	-moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.242);
-	box-shadow: 6px 8px 18px rgba(0, 0, 0, 0.242);
-	background: var(--layoutBlock);
-	padding: 2em;
-	text-align: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.242);
+  -moz-box-shadow: 0px 10px 38px -16px rgba(0, 0, 0, 0.242);
+  box-shadow: 6px 8px 18px rgba(0, 0, 0, 0.242);
+  background: var(--layoutBlock);
+  padding: 2em;
+  text-align: center;
 
-	display: grid;
-	grid-template-areas:
-		'img'
-		'header'
-		'text';
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 10vh 28vh;
-	grid-gap: 5px;
+  display: grid;
+  grid-template-areas:
+    'img'
+    'header'
+    'text';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10vh 28vh;
+  grid-gap: 5px;
 }
 
 #img-wrapper {
-	grid-area: img;
-	position: relative;
-	display: inline-block;
-	justify-self: center;
-	padding-top: 2em;
+  grid-area: img;
+  position: relative;
+  display: inline-block;
+  justify-self: center;
+  padding-top: 2em;
 }
 #img-wrapper::before {
-	content: ' ';
-	position: absolute;
-	margin: 0% 20%;
-	background: var(--secondary);
-	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+  content: ' ';
+  position: absolute;
+  margin: 0% 20%;
+  background: var(--secondary);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
 
 #img-wrapper .svg-card {
-	width: 250px;
-	height: 156px;
-	position: relative;
+  width: 250px;
+  height: 156px;
+  position: relative;
 }
 
 .instructions-card h1 {
-	grid-area: header;
-	font-size: 2.5rem;
+  grid-area: header;
+  font-size: 2.5rem;
 }
 
 #instructions-card2 h1,
 #instructions-card3 h1 {
-	color: var(--primary);
+  color: var(--primary);
 }
 
 .instructions-card div {
-	grid-area: text;
+  grid-area: text;
 }
 
 .instructions-card div p {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #start-button {
-	grid-column: 2;
-	background: var(--primary);
-	border: none;
-	border-radius: 5px;
-	color: #ffffffbf;
-	text-align: center;
-	text-decoration: none;
-	font-size: 1em;
-	cursor: pointer;
-	padding: 6px;
-	font-weight: 600;
+  grid-column: 2;
+  background: var(--primary);
+  border: none;
+  border-radius: 5px;
+  color: #ffffffbf;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 6px;
+  font-weight: 600;
 }
 
 #start-button:hover {
-	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
-	color: #ffffff;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.372);
+  color: #ffffff;
 }
