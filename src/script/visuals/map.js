@@ -1,4 +1,4 @@
-import { dataEndpointOne } from '../endpoint.js';
+import { proxyURL, dataEndpointOne } from '../endpoint.js';
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoicmFsZjg4IiwiYSI6ImNrampzODg5MDFteTYycW83cWVoenZtaTgifQ.kLGZ-0NFqYzEtDLLEY5NbQ';
@@ -12,7 +12,7 @@ const map = new mapboxgl.Map({
 map.on('load', function () {
   map.addSource('routes', {
     type: 'geojson',
-    data: dataEndpointOne,
+    data: `${proxyURL}${dataEndpointOne}`,
   });
 
   // fetch external API and then put it in the data var below, then it can be plotted as expected
