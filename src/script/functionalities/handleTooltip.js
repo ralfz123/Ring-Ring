@@ -5,5 +5,5 @@ disappearButton.addEventListener('click', handleEvent);
 
 // When button is clicked, tooltip will disappear
 function handleEvent() {
-	tooltip.style.visibility = 'hidden';
+  tooltip.style.visibility = 'hidden';
 }
